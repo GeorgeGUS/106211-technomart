@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Георгий Гусаков](https://htmlacademy.ru/profile/id106211).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Дубовцев](https://htmlacademy.ru/profile/andrew_dubovtsev).
 
 ---
 
