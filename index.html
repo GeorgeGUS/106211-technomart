@@ -9,11 +9,18 @@
       <header class="top-menu-header">
         <div class="container">
           <a href="#" class="site-logo">ТЕХНОМАРТ</a>
-          <input type="search" name="search" placeholder="Поиск:">
-          <a href="#" class="bookmarks">Закладки: <span class="counter-bookmarks">0</span></a>
-          <a href="#" class="basket">Корзина: <span class="counter-basket">0</span></a>
+          <label for="search"><i class="icon-search"></i></label>
+          <input id="search" type="search" name="search" placeholder="Поиск:">
+          <a href="#" class="bookmarks">
+            <i class="icon-bookmark"></i>
+            Закладки: <span class="counter-bookmarks">0</span>
+          </a>
+          <a href="#" class="basket">
+            <i class="icon-basket"></i>
+            Корзина: <span class="counter-basket">0</span>
+          </a>
           <button class="make-order-btn" type="submit" name="make-order">Оформить заказ</button>
-        </div>      
+        </div>
       </header>
       <div class="top-menu">
         <div class="container">
@@ -25,14 +32,16 @@
             </p>
           </section>
           <section class="top-menu-header-content site-contacts">
-            <div class="call-number">
+            <div class="phone">
+              <i class="icon-phone"></i>
               +7 (812) 555-05-55
             </div>
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </section>
           <section class="top-menu-header-content site-login">
             <a href="#" class="site-login-item site-login-enter">
-              Вход
+              <i class="icon-login"></i>
+              Войти
             </a>
             <a href="#" class="site-login-item site-login-registration">
               Регистрация
@@ -52,38 +61,38 @@
         </div>
       </div>
     </header>
-    
-    <main class="container main-page">
-      <section class="index-content">
+
+    <main class="main-page">
+      <section class="container index-main-menu">
+
         <article class="main-menu-item item-1">
           <p class="main-menu-item-title">Материалы</p>
           <a href="#" class="main-menu-item-btn">На любой вкус</a>
-          <i class="main-menu-item-icon"></i>
+          <div class="main-menu-item-icon"><img src="" alt=""></div>
           <div class="new-corner"></div>
         </article>
         <article class="main-menu-item item-2">
           <p class="main-menu-item-title">Инструмент</p>
           <a href="#" class="main-menu-item-btn">На все случаи</a>
-          <i class="main-menu-item-icon"></i>
+          <div class="main-menu-item-icon"><img src="" alt=""></div>
         </article>
         <article class="main-menu-item item-3">
           <p class="main-menu-item-title">Техника</p>
           <a href="#" class="main-menu-item-btn">Для стройки</a>
-          <i class="main-menu-item-icon"></i>
+          <div class="main-menu-item-icon"><img src="" alt=""></div>
         </article>
         <article class="main-menu-item item-4">
           <p class="main-menu-item-title">Скидка 50%</p>
           <a href="#" class="main-menu-item-btn">На 350 товаров</a>
-          <i class="main-menu-item-icon"></i>
+          <div class="main-menu-item-icon"><img src="" alt=""></div>
         </article>
         <article class="main-menu-item item-5">
           <p class="main-menu-item-title">Доставка</p>
           <a href="#" class="main-menu-item-btn">Бесплатно</a>
-          <i class="main-menu-item-icon"></i>
+          <div class="main-menu-item-icon"><img src="" alt=""></div>
         </article>
+
         <article class="main-menu-slider">
-          <input type="radio" id="slide-1" checked>
-          <input type="radio" id="slide-2">
           <div class="slider-controls-arrows"><!-- стелки слайдера-->
             <label for="slide-1">
               <div class="slider-arrow slider-arrow-left"><i class="icon-left"></i></div>
@@ -96,6 +105,8 @@
             <label for="slide-1"></label>
             <label for="slide-2"></label>
           </div>
+          <input type="radio" id="slide-1" checked>
+          <input type="radio" id="slide-2">
           <div class="slider-inner">
             <figure class="slider-slide-1">
               <figcaption class="slider-title">
@@ -114,19 +125,73 @@
           </div>
           <a href="catalog.html" class="slider-btn">Открыть каталог</a>
         </article>
+
       </section>
-      <section class="index-content">
-        
+
+      <section class="container index-content">
+        <header class="index-content-header">
+          <h2>Популярные товары:</h2>
+          <a href="#" class="btn content-header-btn">Все популярные товары</a>
+        </header>
+        <article class="product-item">
+          <div class="product-image"><img src="http://placehold.it/220x170" alt=""></div>
+          <p class="product-name">Перфоратор BOSCH<br>BFG 9000</p>
+          <s class="old-price">32500 р.</s><br>
+          <a href="" class="price-btn">25500 р.</a>
+        </article>
+        <article class="product-item">
+          <div class="product-image"><img src="http://placehold.it/220x170" alt=""></div>
+          <p class="product-name">Перфоратор BOSCH<br>BFG 3000</p>
+          <s class="old-price">22500 р.</s><br>
+          <a href="" class="price-btn">15500 р.</a>
+        </article>
+        <article class="product-item">
+          <div class="product-image"><img src="http://placehold.it/220x170" alt=""></div>
+          <p class="product-name">Перфоратор BOSCH<br>BFG 6000</p>
+          <s class="old-price">30500 р.</s><br>
+          <a href="" class="price-btn">25500 р.</a>
+        </article>
+        <article class="product-item">
+          <div class="new-corner"></div>
+          <div class="product-image"><img src="http://placehold.it/220x170" alt=""></div>
+          <p class="product-name">Перфоратор BOSCH<br>BFG 2000</p>
+          <s class="old-price"></s><br>
+          <a href="" class="price-btn">12500 р.</a>
+        </article>
       </section>
-      <section class="index-content">
-        
+      <section class="container index-content">
+        <header class="index-content-header">
+          <h2>Популярные производители</h2>
+          <a href="#" class="btn content-header-btn">Все популярные производители</a>
+        </header>
+        <article class="brand bosch"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand makita"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand dewalt"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand interskol"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand hitachi"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand lg"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand aec"><img src="http://placehold.it/220x145" alt=""></article>
+        <article class="brand metabo"><img src="http://placehold.it/220x145" alt=""></article>
       </section>
+      <div class="services-box">
+        <section class="container index-services">
+          <header class="services-header">
+            <h2>Сервисы</h2>
+            <p>
+              Хороший интернет-магазин отличается от плохого не только ценами!<br>
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
+          </header>
+
+        </section>
+      </div>
+
     </main>
-    
+
     <footer class="main-footer">
       <div class="container">
-        
+
       </div>
-    </footer>  
+    </footer>
   </body>
 </html>
