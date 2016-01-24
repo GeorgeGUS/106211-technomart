@@ -6,11 +6,11 @@
   </head>
   <body>
     <header class="main-header">
-      <header class="top-menu-header">
+      <header class="top-menu">
         <div class="container">
           <a href="#" class="site-logo">ТЕХНОМАРТ</a>
           <label for="search"><i class="icon-search"></i></label>
-          <input type="search" name="search" placeholder="Поиск:">
+          <input id="search" type="search" name="search" placeholder="Поиск:">
           <a href="#" class="bookmarks">
             <i class="icon-bookmark"></i>
             Закладки: <span class="counter-bookmarks">0</span>
@@ -22,64 +22,153 @@
           <button class="make-order-btn" type="submit" name="make-order">Оформить заказ</button>
         </div>
       </header>
-      <div class="top-menu">
         <div class="container">
-          <section class="top-menu-header-content site-description">
-            <p>
-              Интернет-магазин<br>
-              строительных материалов<br>
-              и инструментов для ремонта
-            </p>
-          </section>
-          <section class="top-menu-header-content site-contacts">
-            <div class="phone">
-              <i class="icon-phone"></i>
-              +7 (812) 555-05-55
-            </div>
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </section>
-          <section class="top-menu-header-content site-login">
-            <div class="site-login-registered">
-              <a href="#" class="site-login-item site-login-username">
-                <i class="icon-user"></i>
-                Равшан Джамшутович
-                <i class="icon-logout"></i>
-              </a><br>  <!--              нужен ли здесь перенос строки?-->
-              <a href="#">Мои заказы</a>
-              <!--         не знаю, как правильно оформить здесь точку-разделитель-->
-              <a href="#">Личный кабинет</a>
-            </div>
-          </section>
-          <nav class="top-menu-naigation">
-            <ul>
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Спецпредложения</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
+        <section class="main-header-content site-description">
+          <p>
+            Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта
+          </p>
+        </section>
+        <section class="main-header-content site-contacts">
+          <div class="phone">
+            <i class="icon-phone"></i>
+            +7 (812) 555-05-55
+          </div>
+          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </section>
+        <section class="main-header-content site-login">
+          <div class="site-login-registered">
+            <a href="#" class="site-login-item site-login-username">
+              <i class="icon-user"></i>
+              Равшан Джамшутович
+              <a href="#" class="user-logout"><i class="icon-logout"></i></a>
+            </a>
+            <a href="#" class="user-btn">Мои заказы</a>
+            <a href="#" class="user-btn">Личный кабинет</a>
+          </div>
+        </section>
+
+        <nav class="main-header-naigation">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Компания</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Спецпредложения</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main class="container main-page">
-      <section class="index-content">
+    <main class="main-page">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ul>
+            <li><a href="index.html"><i class="icon-home"></i></a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Инструмент</a></li>
+            <li><a>Перфораторы</a></li>
+          </ul>
+        </nav>
+        <div class="main-page-title">
+          <h1>Перфораторы</h1>
+        </div>
+        <section class="left-column">
+          <header class="column-header">
+            <i>Фильтр:</i>
+          </header>
+          <form action="http://echo.htmlacademy.ru"
+            oninput="priceoutput.value=pricecount.value"
+            name="user-message" method="post">
+            <b>Цена:</b>
+            <input type="range" name="pricecount" min="0" max="35000" step="500" value="30000" >
+            <output>0</output> - <output name="priceoutput">30000</output>
+            <hr>
+            <b>Производители:</b>
+            <ul>
+              <li><label><input type="checkbox" name="company" value="Bosch">Bosch</label></li>
+              <li><label><input type="checkbox" name="company" value="Интерскол">Интерскол</label></li>
+              <li><label><input type="checkbox" name="company" value="Makita">Makita</label></li>
+              <li><label><input type="checkbox" name="company" value="Dewalt">Dewalt</label></li>
+              <li><label><input type="checkbox" name="company" value="Hitachi">Hitachi</label></li>
+            </ul>
+            <hr>
+            <b>Питание:</b>
+            <ul>
+              <li><label><input type="radio" name="power" value="accumulator" checked>Аккумуляторные</label></li>
+              <li><label><input type="radio" name="power" value="mains-supply">Сетевые</label></li>
+            </ul>
+            <button class="next-btn" type="submit">Показать</button>
+          </form>
 
-      </section>
-      <section class="index-content">
 
-      </section>
-      <section class="index-content">
+        </section>
+        <section class="right-column">
+          <header class="column-header">
+            <i>Сортировка:</i>
+          </header>
 
-      </section>
+        </section>
+      </div>
+
+      <footer class="main-page-footer">
+        <div class="container">
+          <section class="main-footer-contacts">
+            <a href="#" class="site-logo footer-logo">ТЕХНОМАРТ</a>
+            <p>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+              +7 (812) 555-05-55
+            </p>
+          </section>
+          <section class="main-footer-menu">
+            <nav class="main-footer-menu-top">
+              <ul>
+                <li><a href="#">Компания</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <nav class="main-footer-menu-bottom">
+              <ul>
+                <li><a href="#">Материалы</a></li>
+                <li><a href="#">Техника</a></li>
+                <li><a href="#">Инструмент</a></li>
+                <li><a href="#">Спецпредложения</a></li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </footer>
     </main>
 
     <footer class="main-footer">
       <div class="container">
-
+        <section class="copyright-company">
+          <p>
+            &#169; 2010–2016 Компания «Техномарт»<br>
+            Все права защищены
+          </p>
+        </section>
+        <section class="socials">
+          <a href="#" class="social social-vk" target="_blank">Вконакте</a>
+          <a href="#" class="social social-fb" target="_blank">Facebook</a>
+          <a href="#" class="social social-inst" target="_blank">Instagram</a>
+        </section>
+        <section class="copyright-author">
+          <span class="mail">
+            Обратная связь:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </span>
+          <span class="website">
+            Разработано —
+            <a href="http://htmlacademy.ru">htmlacademy.ru</a>
+          </span>
+        </section>
       </div>
     </footer>
   </body>
