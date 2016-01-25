@@ -19,7 +19,7 @@
             <i class="icon-basket"></i>
             Корзина: <span class="counter-basket">10</span>
           </a>
-          <button class="make-order-btn" type="submit" name="make-order">Оформить заказ</button>
+          <a href="#" class="make-order-btn">Оформить заказ</a>
         </div>
       </header>
         <div class="container">
@@ -64,21 +64,26 @@
     </header>
 
     <main class="main-page">
-      <article class="bascket-add-form">
+      <div class="bascket-wrapper">
         <div class="cross"></div>
-        <p><img src="http://placehold.it/64" alt="OK">Товар добавлен в корзину!</p>
-        <form action="#" name="bascket" method="post">
-          <button id="make-order-btn" name="make-order-btn">Оформить заказ</button>
-          <button id="close-btn" name="close-btn">Продолжить покупки</button>
-        </form>
-      </article>
+        <p>
+          <img src="http://placehold.it/64" alt="OK">
+          Товар добавлен в корзину!
+        </p>
+        <div class="basket-btns">
+          <a href="#" class="btn make-order-btn">Оформить заказ</a>
+          <a href="#" class="btn close-btn">Продолжить покупки</a>
+        </div>
+      </div>
       <div class="container">
         <nav class="breadcrumbs">
           <ul>
-            <li><a href="index.html"><i class="icon-home"></i></a></li>
+            <li><a href="index.html" class="home-page">
+              <i class="icon-home"></i>Домой</a>
+            </li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Инструмент</a></li>
-            <li><a>Перфораторы</a></li>
+            <li><a href="#" class="current-crumb">Перфораторы</a></li>
           </ul>
         </nav>
 
@@ -90,12 +95,10 @@
           <header class="column-header">
             <i>Фильтр:</i>
           </header>
-          <form action="http://echo.htmlacademy.ru"
-            oninput="priceoutput.value=pricecount.value"
-            name="user-message" method="post">
-            <b>Цена:</b>
-            <input type="range" name="pricecount" min="0" max="35000" step="500" value="30000" >
-            <output>0</output> - <output name="priceoutput">30000</output>
+          <div class="filters">
+            <b>Цена:</b><br>
+            <input type="range" name="pricecount" min="0" max="35000" step="500" value="30000" ><br>
+            <span class="range min-price">0</span> - <span class="range max-price">30000</span>
             <hr>
             <b>Производители:</b>
             <ul>
@@ -111,8 +114,8 @@
               <li><label><input type="radio" name="power" value="accumulator" checked>Аккумуляторные</label></li>
               <li><label><input type="radio" name="power" value="mains-supply">Сетевые</label></li>
             </ul>
-            <button class="next-btn" type="submit">Показать</button>
-          </form>
+            <a href="#" class="next-btn">Показать</a>
+          </div>
         </section>
 
         <section class="right-column">
@@ -124,132 +127,153 @@
               <li><a href="#" class="sort-name">По функционалу</a></li>
 
               <!-- не уверен. что так надо оформить стрелки -->
-              <li><a href="#" class="sort-btn"><i class="icon-up-dir"></i></a></li>
-              <li><a href="#" class="sort-btn"><i class="icon-down-dir"></i></a></li>
+              <li><a href="#" class="arrow arrow-up"><i class="icon-up-dir"></i>По возрастанию</a></li>
+              <li><a href="#" class="arrow arrow-down"><i class="icon-down-dir"></i>По убыванию</a></li>
             </ul>
           </header>
           <div class="product-row">
             <article class="product-item">
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 3000
-              </p>
-              <s class="old-price">22500 р.</s><br>
-              <a href="#" class="price-btn">15500 р.</a>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 3000
+              </div>
+              <div class="old-price"><s>22500 р.</s></div>
+              <div class="price">15500 р.</div>
             </article>
             <article class="product-item">
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 6000
-              </p>
-              <s class="old-price">30500 р.</s><br>
-              <a href="#" class="price-btn">25500 р.</a>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 6000
+              </div>
+              <div class="old-price"><s>30500 р.</s></div>
+              <div class="price">25500 р.</div>
             </article>
             <article class="product-item">
-              <div class="new-product-corner">new</div>
-              <div class="product-image">
-                <img src="http://placehold.it/220x170" alt="">
-
-                <!-- как здесь лучше оформить кнопки? -->
-                <div class="product-item-hover">
-                  <button id="buy-btn" name="buy-btn"><i class="icon-bascket"></i>Купить</button>
-                  <button id="bookmark-btn" name="bookmark-btn">В закладки</button>
-                </div>
+              <div class="new-product-corner">Новинка</div>
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 2000
-              </p>
-              <s class="old-price"></s><br>
-              <a href="#" class="price-btn">12500 р.</a>
-            </article>
-          </div>
-
-          <div class="product-row">
-            <article class="product-item">
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 3000
-              </p>
-              <s class="old-price">22500 р.</s><br>
-              <a href="#" class="price-btn">15500 р.</a>
-            </article>
-            <article class="product-item">
-              <div class="new-product-corner">new</div>
-              <div class="product-image">
-                <img src="http://placehold.it/220x170" alt="">
+              <div class="product-name">
+                Перфоратор BOSCH BFG 2000
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 6000
-              </p>
-              <s class="old-price">30500 р.</s><br>
-              <a href="#" class="price-btn">25500 р.</a>
-            </article>
-            <article class="product-item">
-              <div class="product-image">
-                <img src="http://placehold.it/220x170" alt="">
-              </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 2000
-              </p>
-              <s class="old-price"></s><br>
-              <a href="#" class="price-btn">12500 р.</a>
+              <div class="old-price"><s></s></div>
+            <div class="price">12500 р.</div>
             </article>
           </div>
 
           <div class="product-row">
             <article class="product-item">
-              <div class="new-product-corner">new</div>
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 3000
-              </p>
-              <s class="old-price">22500 р.</s><br>
-              <a href="#" class="price-btn">15500 р.</a>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 3000
+              </div>
+              <div class="old-price"><s>22500 р.</s></div>
+              <div class="price">15500 р.</div>
             </article>
             <article class="product-item">
+              <div class="new-product-corner">Новинка</div>
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 6000
-              </p>
-              <s class="old-price">30500 р.</s><br>
-              <a href="#" class="price-btn">25500 р.</a>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 6000
+              </div>
+              <div class="old-price"><s>30500 р.</s></div>
+              <div class="price">25500 р.</div>
             </article>
             <article class="product-item">
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
               <div class="product-image">
                 <img src="http://placehold.it/220x170" alt="">
               </div>
-              <p class="product-name">
-                Перфоратор BOSCH<br>
-                BFG 2000
-              </p>
-              <s class="old-price"></s><br>
-              <a href="#" class="price-btn">12500 р.</a>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 2000
+              </div>
+              <div class="old-price"><s></s></div>
+            <div class="price">12500 р.</div>
+            </article>
+          </div>
+
+          <div class="product-row">
+            <article class="product-item">
+              <div class="new-product-corner">Новинка</div>
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
+              <div class="product-image">
+                <img src="http://placehold.it/220x170" alt="">
+              </div>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 3000
+              </div>
+              <div class="old-price"><s>22500 р.</s></div>
+              <div class="price">15500 р.</div>
+            </article>
+            <article class="product-item">
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
+              <div class="product-image">
+                <img src="http://placehold.it/220x170" alt="">
+              </div>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 6000
+              </div>
+              <div class="old-price"><s>30500 р.</s></div>
+              <div class="price">25500 р.</div>
+            </article>
+            <article class="product-item">
+              <div class="actions">
+                <a href="#" class="action-btn buy">Купить</a>
+                <a href="#" class="action-btn bookmark">В закладки</a>
+              </div>
+              <div class="product-image">
+                <img src="http://placehold.it/220x170" alt="">
+              </div>
+              <div class="product-name">
+                Перфоратор BOSCH BFG 2000
+              </div>
+              <div class="old-price"><s></s></div>
+            <div class="price">12500 р.</div>
             </article>
           </div>
 
           <nav class="pagination">
-            <a class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">Следующая</a>
+            <a href="#" class="page current-page">1</a>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="page">Следующая</a>
           </nav>
         </section>
       </div>
@@ -274,7 +298,7 @@
             </p>
           </section>
           <section class="main-footer-menu">
-            <nav class="main-footer-menu-top">
+            <nav class="top-menu">
               <ul>
                 <li><a href="#">Компания</a></li>
                 <li><a href="#">Новости</a></li>
@@ -283,7 +307,7 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <nav class="main-footer-menu-bottom">
+            <nav class="bottom-menu">
               <ul>
                 <li><a href="#">Материалы</a></li>
                 <li><a href="#">Техника</a></li>
