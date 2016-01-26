@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="main-header">
-      <header class="top-menu">
+      <div class="top-menu">
         <div class="container">
           <a href="#" class="site-logo">ТЕХНОМАРТ</a>
           <label for="search"><i class="icon-search"></i></label>
@@ -21,7 +21,7 @@
           </a>
           <a href="#" class="make-order-btn">Оформить заказ</a>
         </div>
-      </header>
+      </div>
       <div class="container">
         <section class="main-header-content site-description">
           <p>
@@ -49,7 +49,7 @@
 
         <nav class="main-header-naigation">
           <ul>
-            <li><a href="#">Главная</a></li>
+            <li><a href="#" class="active-link">Главная</a></li>
             <li><a href="#">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
@@ -66,30 +66,33 @@
         <article class="main-menu-item item-1">
           <p class="main-menu-item-title">Материалы</p>
           <a href="#" class="main-menu-item-btn">На любой вкус</a>
-          <div class="main-menu-item-icon"><img src="" alt=""></div>
+          <div class="main-menu-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
           <div class="new-corner"></div>
         </article>
         <article class="main-menu-item item-2">
           <p class="main-menu-item-title">Инструмент</p>
           <a href="#" class="main-menu-item-btn">На все случаи</a>
-          <div class="main-menu-item-icon"><img src="" alt=""></div>
+          <div class="main-menu-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
         </article>
         <article class="main-menu-item item-3">
           <p class="main-menu-item-title">Техника</p>
           <a href="#" class="main-menu-item-btn">Для стройки</a>
-          <div class="main-menu-item-icon"><img src="" alt=""></div>
+          <div class="main-menu-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
         </article>
         <article class="main-menu-item item-4">
           <p class="main-menu-item-title">Скидка 50%</p>
           <a href="#" class="main-menu-item-btn">На 350 товаров</a>
-          <div class="main-menu-item-icon"><img src="" alt=""></div>
+          <div class="main-menu-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
         </article>
         <article class="main-menu-item item-5">
           <p class="main-menu-item-title">Доставка</p>
           <a href="#" class="main-menu-item-btn">Бесплатно</a>
-          <div class="main-menu-item-icon"><img src="" alt=""></div>
+          <div class="main-menu-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
         </article>
 
+        <!-- ********************************************************* -->
+        <!--       СЛАЙДЕР, КОТОРЫЙ НАДО ЗАМЕНИТЬ НА OWL-CARUSEL       -->
+        <!-- ********************************************************* -->
         <article class="main-menu-slider">
           <div class="slider-inner">
             <div class="slider-slide-1">
@@ -97,50 +100,34 @@
                 <h2>Перфораторы</h2>
                 <p>Настоящие мужские игрушки</p>
               </div>
-              <img src="" width="620" height="266" alt="Мужик с перфоратором">
+              <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с перфоратором">
             </div>
             <div class="slider-slide-2">
               <div class="slider-title">
                 <h2>Дрели</h2>
                 <p>Соседям на радость!</p>
               </div>
-              <img src="" width="620" height="266" alt="Мужик с дрелью">
+              <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с дрелью">
             </div>
           </div>
           <div class="slider-controls-arrows"><!-- стелки слайдера-->
-            <label for="slide-1">
-              <div class="slider-arrow slider-arrow-left"><i class="icon-left"></i></div>
-            </label>
-            <label for="slide-2">
-              <div class="slider-arrow slider-arrow-right"><i class="icon-right"></i></div>
-            </label>
+              <div class="slider-arrow arrow-left"><i class="icon-left"></i></div>            
+              <div class="slider-arrow arrow-right"><i class="icon-right"></i></div>            
           </div>
           <div class="slider-controls-radio"><!-- переключатели слайдов-->
-            <label for="slide-1"></label>
-            <label for="slide-2"></label>
+            <label><input type="radio" name="slide" checked></label>
+            <label><input type="radio" name="slide"></label>
           </div>
-          <input type="radio" id="slide-1" name="slide" checked>
-          <input type="radio" id="slide-2" name="slide">
           <a href="catalog.html" class="slider-btn">Открыть каталог</a>
         </article>
-      </section>
+        <!-- ********************************************************* -->        
+      </section>       
 
       <section class="container index-content">
         <header class="index-content-header">
           <h2>Популярные товары:</h2>
           <a href="#" class="btn all-products-btn">Все популярные товары</a>
-        </header>
-        <div class="bascket-wrapper">
-          <div class="cross"></div>
-          <p>
-            <img src="http://placehold.it/64" alt="OK">
-            Товар добавлен в корзину!
-          </p>
-          <div class="basket-btns">
-            <a href="#" class="btn make-order-btn">Оформить заказ</a>
-            <a href="#" class="btn close-btn">Продолжить покупки</a>
-          </div>
-        </div
+        </header>        
         <article class="product-item">
           <div class="actions">
             <a href="#" class="action-btn buy">Купить</a>
@@ -334,7 +321,7 @@
 
         </section>
       </section>
-      <footer class="main-page-footer">
+      <div class="main-page-footer">
         <div class="container">
           <section class="main-footer-contacts">
             <a href="#" class="site-logo footer-logo">ТЕХНОМАРТ</a>
@@ -363,7 +350,20 @@
             </nav>
           </section>
         </div>
-      </footer>
+      </div>
+      <!--       ********POPUP ТОВАР В КОРЗИНЕ********       -->
+        <div class="bascket-wrapper">
+          <div class="cross"></div>
+          <p>
+            <img src="http://placehold.it/64" alt="OK">
+            Товар добавлен в корзину!
+          </p>
+          <div class="basket-btns">
+            <a href="#" class="btn make-order-btn">Оформить заказ</a>
+            <a href="#" class="btn close-btn">Продолжить покупки</a>
+          </div>
+        </div>
+      <!-- ************************************************* -->
     </main>
 
     <footer class="main-footer">
