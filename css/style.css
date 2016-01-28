@@ -1,5 +1,5 @@
 body{
-  font-family: 'PT Sans Regular', 'Arial', sans-serif;
+  font-family: 'Cuprum Regular', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 24px;
@@ -7,7 +7,6 @@ body{
 }
 
 h1{
-  font-family: 'Cuprum Regular', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -15,7 +14,6 @@ h1{
 }
 
 h2{
-  font-family: 'Cuprum Regular', 'Arial', sans-serif;
   font-size: 30px;
   line-height: 24px;
 }
