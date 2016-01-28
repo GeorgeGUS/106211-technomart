@@ -13,33 +13,33 @@
             <label for="search"><i class="icon-search"></i></label>
             <input id="search" type="search" name="search" placeholder="Поиск:">
           </span>
-          <a href="#" class="t-m-item bookmarks">
+          <a href="#" class="t-m-action bookmarks">
             <i class="icon-bookmark"></i>
             Закладки: <span class="counter-bookmarks">0</span>
           </a>
-          <a href="#" class="t-m-item cart">
+          <a href="#" class="t-m-action cart">
             <i class="icon-basket"></i>
             Корзина: <span class="counter-cart">0</span>
           </a>
-          <a href="#" class="t-m-item make-order-btn">Оформить заказ</a>
+          <a href="#" class="t-m-action make-order-btn">Оформить заказ</a>
         </div>
       </div>
-      <div class="container">
-        <section class="main-header-content site-description">
-          <p class="">
+      <div class="container main-header-content">
+        <section class="site-description">
+          <p>
             Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта
           </p>
         </section>
-        <section class="main-header-content site-contacts">
+        <section class="site-contacts">
           <div class="phone">
             <i class="icon-phone"></i>
-            +7 (812) 555-05-55
+            <span class="phone-number">+7 (812) 555-05-55</span>
           </div>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </section>
-        <section class="main-header-content site-login">
+        <section class="site-login">
           <a href="#" class="site-login-item site-login-enter">
             <i class="icon-login"></i>
             Войти
@@ -48,19 +48,18 @@
             Регистрация
           </a>
         </section>
-
-        <nav class="main-header-navigation">
-          <ul class="gorizontal">
-            <li><a href="#" class="t-m-item active-link">Главная</a></li>
-            <li><a href="#" class="t-m-item">Компания</a></li>
-            <li><a href="catalog.html" class="t-m-item">Каталог</a></li>
-            <li><a href="#" class="t-m-item">Новости</a></li>
-            <li><a href="#" class="t-m-item">Спецпредложения</a></li>
-            <li><a href="#" class="t-m-item">Доставка</a></li>
-            <li><a href="#" class="t-m-item">Контакты</a></li>
-          </ul>
-        </nav>
       </div>
+      <nav class="container main-header-navigation">
+        <ul class="gorizontal">
+          <li><a href="#" class="nav-item active-link">Главная</a></li>
+          <li><a href="#" class="nav-item">Компания</a></li>
+          <li><a href="catalog.html" class="nav-item">Каталог</a></li>
+          <li><a href="#" class="nav-item">Новости</a></li>
+          <li><a href="#" class="nav-item">Спецпредложения</a></li>
+          <li><a href="#" class="nav-item">Доставка</a></li>
+          <li><a href="#" class="nav-item">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main-page">
@@ -81,72 +80,37 @@
           <a href="#" class="m-m-item-btn">Для стройки</a>
           <div class="m-m-item-icon"><img src="http://placehold.it/70x100" alt=""></div>
         </article>
-
-        <article class="m-m-slider">
-          <div class="m-m-slider-stage-outer">
-            <div class="m-m-slider-stage">
-                <div class="m-m-slider-item">
-                  <div class="slider-title">
-                    <span class="slide-title">Перфораторы</span>
-                    <p class="slide-slogan">Настоящие мужские игрушки</p>
-                  </div>
-                  <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с перфоратором">
+        <article class="slider owl-carousel owl-theme owl-loaded">
+          <div class="owl-stage-outer">
+            <div class="owl-stage">
+              <div class="owl-item">
+                <div class="slider-caption">
+                  <span class="slide-title">Перфораторы</span>
+                  <p class="slide-slogan">Настоящие мужские игрушки</p>
                 </div>
-                <div class="m-m-slider-item">
-                  <div class="slider-title">
-                    <span class="slide-title">Дрели</span>
-                    <p class="slide-slogan">Соседям на радость!</p>
-                  </div>
-                  <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с дрелью">
+                <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с перфоратором">
+              </div>
+              <div class="owl-item">
+                <div class="slider-caption">
+                  <span class="slide-title">Дрели</span>
+                  <p class="slide-slogan">Соседям на радость!</p>
                 </div>
+                <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с дрелью">
+              </div>
             </div>
           </div>
-          <div class="m-m-slider-controls">
-              <div class="m-m-slider-nav">
-                  <div class="m-m-slider-prev">prev</div>
-                  <div class="m-m-slider-next">next</div>
-              </div>
-              <div class="m-m-slider-dots">
-                  <div class="m-m-slider-dot active"><span></span></div>
-                  <div class="m-m-slider-dot"><span></span></div>
-              </div>
+          <div class="owl-controls">
+            <div class="owl-nav slider-nav">
+              <div class="owl-prev prev-btn"><i class="icon-left"></i>prev</div>
+              <div class="owl-next next-btn"><i class="icon-right"></i>next</div>
+            </div>
+            <div class="owl-dots slider-dots">
+              <div class="owl-dot active"><span class="slider-dot"></span></div>
+              <div class="owl-dot"><span class="slider-dot"></span></div>
+            </div>
           </div>
           <a href="catalog.html" class="red-btn">Открыть каталог</a>
         </article>
-
-        <!-- ********************************************************* -->
-        <!--       СЛАЙДЕР, КОТОРЫЙ НАДО ЗАМЕНИТЬ НА OWL-CARUSEL       -->
-        <!-- ********************************************************* -->
-<!--
-        <article class="m-m-slider">
-          <div class="slider-inner">
-            <div class="slider-slide-1">
-              <div class="slider-title">
-                <h2>Перфораторы</h2>
-                <p>Настоящие мужские игрушки</p>
-              </div>
-              <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с перфоратором">
-            </div>
-            <div class="slider-slide-2">
-              <div class="slider-title">
-                <h2>Дрели</h2>
-                <p>Соседям на радость!</p>
-              </div>
-              <img src="http://placehold.it/620x266" width="620" height="266" alt="Мужик с дрелью">
-            </div>
-          </div>
-          <div class="slider-controls-arrows">
-              <div class="slider-arrow arrow-left"><i class="icon-left"></i></div>
-              <div class="slider-arrow arrow-right"><i class="icon-right"></i></div>
-          </div>
-          <div class="slider-controls-radio">
-            <label><input type="radio" name="slide" checked></label>
-            <label><input type="radio" name="slide"></label>
-          </div>
-          <a href="catalog.html" class="slider-btn">Открыть каталог</a>
-        </article>
--->
-        <!-- ********************************************************* -->
         <article class="m-m-item item-4">
           <span class="m-m-item-title">Скидка 50%</span>
           <a href="#" class="m-m-item-btn">На 350 товаров</a>
