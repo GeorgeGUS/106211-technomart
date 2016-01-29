@@ -56,13 +56,13 @@
       </div>
       <nav class="container main-header-navigation">
         <ul class="horizontal">
-          <li><a href="index.html" class="nav-item">Главная</a></li>
-          <li><a href="#" class="nav-item">Компания</a></li>
-          <li><a href="#" class="nav-item active-link">Каталог</a></li>
-          <li><a href="#" class="nav-item">Новости</a></li>
-          <li><a href="#" class="nav-item">Спецпредложения</a></li>
-          <li><a href="#" class="nav-item">Доставка</a></li>
-         <li><a href="#" class="nav-item">Контакты</a></li>
+          <li><a href="index.html" class="nav-item">Главная</a></li><li><!-- для удаления пробелов -->
+          <a href="#" class="nav-item">Компания</a></li><li>
+          <a href="#" class="nav-item active-link">Каталог</a></li><li>
+          <a href="#" class="nav-item">Новости</a></li><li>
+          <a href="#" class="nav-item">Спецпредложения</a></li><li>
+          <a href="#" class="nav-item">Доставка</a></li><li>
+          <a href="#" class="nav-item">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -73,10 +73,10 @@
           <ul>
             <li><a href="index.html" class="crumb-link home-page">
               <i class="icon-home"></i>Домой</a>
-            </li>
-            <li><a href="#" class="crumb-link">Каталог</a></li>
-            <li><a href="#" class="crumb-link">Инструмент</a></li>
-            <li><span class="crumb-link">Перфораторы</span></li>
+            </li><li>
+            <a href="#" class="crumb-link">Каталог</a></li><li><!-- для удаления пробелов -->
+            <a href="#" class="crumb-link">Инструмент</a></li><li>
+            <span class="crumb-link">Перфораторы</span></li>
           </ul>
         </div>
 
@@ -89,7 +89,8 @@
             <span class="filter-title">Фильтр:</span>
           </div>
           <form class="filters" action="http://echo.htmlacademy.ru" method="post">
-            <span class="filter-name">Цена:</span>
+          <fieldset>
+            <legend>Цена:</legend>
             <div class="range-filter">
               <div class="range-input">
                 <div class="range-scale">
@@ -100,17 +101,16 @@
               </div>
               <div class="price-controls">
                 <div class="min-price-container">
-                  <input class="min-price" type="text" name="min-price" value="0">
+                  от <input class="min-price" type="text" name="min-price" value="0">
                 </div>
                 <div class="max-price-container">
-                  <input class="max-price" type="text" name="max-price" value="30000">
+                  до <input class="max-price" type="text" name="max-price" value="30000">
                 </div>
               </div>
             </div>
-
-            <div class="filter-divider"></div>
-
-            <span class="filter-name">Производители:</span>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
             <ul>
               <li>
                 <label><input type="checkbox" name="company" value="Bosch" checked>Bosch</label>
@@ -128,10 +128,9 @@
                 <label><input type="checkbox" name="company" value="Hitachi">Hitachi</label>
               </li>
             </ul>
-
-            <div class="filter-divider"></div>
-
-            <span class="filter-name">Питание:</span>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
             <ul>
               <li>
                 <label><input type="radio" name="power" value="accumulator" checked>Аккумуляторные</label>
@@ -140,6 +139,7 @@
                 <label><input type="radio" name="power" value="mains-supply">Сетевые</label>
               </li>
             </ul>
+          </fieldset>
             <button type="submit" class="white-btn">Показать</button>
           </form>
         </section>
