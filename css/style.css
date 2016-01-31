@@ -1,9 +1,17 @@
 body{
+  margin: 0;
+  padding: 0;
   font-family: 'Cuprum Regular', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 24px;
   color: #000;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 h1{
@@ -16,4 +24,552 @@ h1{
 h2{
   font-size: 30px;
   line-height: 24px;
+}
+
+ul.horizontal {  
+  margin: 0;
+  padding: 0;
+}
+
+ul.horizontal li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.std-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 3px;
+  background: #ee3643;
+}
+
+button {
+  border: none;  
+}
+
+/* ----------------- MAIN-HEADER ----------------- */
+
+.main-header {
+  min-height: 320px;
+  background: #f1f5f7;
+}
+
+.main-header .top-menu {
+  height: 42px;
+  background: #293449;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.site-logo,
+.top-menu .search-field,
+.top-menu-action {
+  display: inline-block;
+  line-height: 42px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.site-logo {  
+  width: 220px;
+  height: 47px;
+  text-align: center;
+  background: #ee3643;
+  font-size: 18px;
+  line-height: 42px;  
+}
+
+.top-menu .search-field {
+  width: 270px;
+}
+
+.top-menu-action {
+  width: 150px;
+}
+
+.main-header-content {
+/*  box-sizing: border-box;*/
+  padding-top: 46px;
+  padding-bottom: 40px;
+  min-height: 70px;
+}
+
+.site-description,
+.site-contacts,
+.site-login {
+  width: 300px;
+}
+
+.site-description,
+.site-contacts {
+  float: left;
+  margin-right: 20px;
+  
+}
+
+.site-description {
+  width: 300px;
+/*  height: 58px;*/
+  
+}
+.site-description p {
+  margin: 0;
+  padding: 0 50px;
+/*  padding-right: 0;*/
+/*  font-size: 16px;*/
+  line-height: 23px;
+}
+
+.site-contacts {
+  vertical-align: middle;
+}
+
+.phone {
+  box-sizing: border-box;  
+  width: 270px;
+  height: 45px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 34px;
+  color: #e9292a;
+  border: 3px solid #fff;
+}
+
+.site-contacts .address {
+  
+}
+
+.site-login {
+  float: right;
+  text-align: right;
+}
+
+.site-login-item {
+  display: inline-block;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  outline: 1px dashed #ccc; /* для наглядности */
+}
+
+.site-login-enter {
+  width: 120px;
+}
+
+.site-login-registration {
+  width: 140px;
+  margin-left: 10px;
+}
+
+
+.site-login-registered {
+  line-height: 45px;
+}
+.user-profile {
+  width: 260px;
+}
+
+.user-logout {
+  width: 40px;
+}
+
+.user-profile-controls {
+  text-align: left;
+}
+
+.user-profile-controls .user-btn   {
+  padding: 11px 18px;
+  
+}
+
+.main-header-navigation {
+  margin-top: 0;
+  min-height: 60px;
+  background: #32425c;
+}
+
+.main-header-navigation ul {
+  line-height: 60px;
+}
+
+
+
+/* -------------- MAIN-PAGE-C0NTENT -------------- */
+
+.main-menu {
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+
+.main-menu-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+  width: 300px;
+  height: 123px;
+  background: #f6b22d;
+}
+
+.main-menu-item:first-child,
+.main-menu-item:nth-child(2) {  
+  margin-right: 20px;
+}
+
+.main-menu-item:nth-child(2) { background: #4aafde; }
+
+.main-menu-item:nth-child(3) { background: #cc79d1; }
+
+.main-menu-item:nth-last-child(2) { background: #85d179; }
+
+/* --------------- SLIDER --------------- */
+
+.slider {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.slider-item {
+  display: none;
+  width: 620px;
+  height: 266px;
+}
+
+.slider-item.active {
+  display: block;
+}
+
+.slider-caption {
+  position: absolute;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 22px;
+  width: 100%;
+  height: 45px;
+}
+
+.slider-nav {  
+  position: absolute;  
+  top: 25%;  
+  width: 100%;
+  height: 50%;
+  
+}
+
+.slider-nav .prev-btn,
+.slider-nav .next-btn {
+  z-index: 100;
+  position: absolute;
+  width: 70px;
+  line-height: 10;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slider-nav .next-btn {
+  right: 0;
+}
+
+.catalog-btn {
+  position: absolute;
+  left: 25px;  
+  width: 195px;
+}
+
+/* --------------- END SLIDER --------------- */
+
+.index-content-header {  
+  padding: 25px;
+  background: #f7f3ec;
+}
+
+.index-content-title {
+  
+}
+
+.all-products {
+  float: right;
+}
+
+.index-content-row {
+  margin: 20px 0;
+}
+
+.product-item {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 16px;
+  width: 220px;
+  height: 318px;
+  outline: 1px dashed #ccc; /* для наглядности */
+}
+
+.brand {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 16px;
+  width: 220px;
+  line-height: 145px;
+  text-align: center;
+  outline: 1px dashed #ccc; /* для наглядности */
+}
+
+.brand img {
+  vertical-align: middle;
+}
+
+.product-item:last-of-type,
+.brand:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.services {
+  margin-top: 85px;
+  margin-bottom: 80px;
+  padding-top: 70px;
+  background: #f2f6f8;
+}
+
+.services .section-title {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.services .section-description {  
+  margin-bottom: 25px;
+}
+
+.service-tabs {
+  box-sizing: border-box;
+  float: left;
+  padding: 50px 0;
+  width: 240px;
+  height: 280px;  
+  margin-bottom: 55px;
+  margin-right: 80px;
+  outline: 1px dashed #ccc; /* для наглядности */
+}
+
+.service-description {
+  display: none;
+}
+
+.service-description.delivery {
+  display: block;
+}
+
+.information-content {
+  position: relative;
+  margin-top: 80px;
+  margin-bottom: 85px;
+}
+
+.information-content .about-company {
+  float: left;
+  width: 540px;
+}
+
+.information-content .contacts {
+  float: right;
+  width: 300px;
+}
+
+.map-image-small {
+  margin: 40px 0;
+  height: 158px;
+}
+
+.map-image-big {
+  position: absolute;
+  display: none;/* <---- в неактивном состоянии ----*/
+}
+
+
+/* -\--\--\--\--\--\--\ СТРАНИЦА КАТАЛОГА /--/--/--/--/--/--/- */
+
+.breadcrumbs {
+  padding: 24px 0;
+}
+
+.crumb-link {
+  
+}
+
+.main-page-caption {
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  background: #f2f6f8;
+}
+
+.left-column {
+  float: left;
+  width: 220px;
+}
+
+.right-column {
+  float: right;
+  width: 700px;
+}
+
+.pagination {
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+
+.main-page-info {
+  padding-top: 45px;
+  padding-bottom: 65px;
+  background: #f2f6f8;
+}
+
+.main-page-info h2 {
+  margin-bottom: 30px;
+}
+
+/*____________________КОНЕЦ СТРАНИЦЫ КАТАЛОГА__________________*/
+
+
+/* ---------------- ОКНО "ТОВАР В КОРЗИНЕ" ---------------- */
+
+.modal-window {   
+  position: fixed;
+  z-index: 500;
+  box-sizing: border-box;  
+  width: 620px;  
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  box-shadow: inset 0 7px #ee3643;
+}
+
+
+/* -------------- ОКНО ФОРМЫ ОБРАТНОЙ СВЯЗИ --------------- */
+
+/*.contact-form { }*/
+
+.modal-window.contact-form {
+  display: none;/* <---- в неактивном состоянии ----*/
+}
+
+.modal-window.cart-form {
+  display: none;/* <---- в неактивном состоянии ----*/
+}
+
+.cross {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 21px;
+  height: 21px;  
+}
+
+.modal-content {
+  box-sizing: border-box;
+  min-height: 170px;
+  padding: 50px 80px;
+}
+
+.check-icon {
+  display: inline-block;
+  margin-right: 35px;
+  width: 65px;
+  height: 65px;    
+  vertical-align: middle;
+  background: url(../img/green-circle-checkmark.png) no-repeat center;
+}
+
+
+.modal-btns {
+  box-sizing: border-box;
+  height: 110px;
+  padding: 38px 80px;
+  background: #f1f1f1;
+}
+
+.cart-btns .std-btn {
+  width: 220px;
+}
+
+.close-btn {
+  margin-left: 16px;
+  background: #fff;
+}
+
+/* ---------------- MAIN-FOOTER ---------------- */
+
+.main-footer {
+/*  margin-top: 85px;*/
+}
+
+.main-footer-top {
+  min-height: 193px;
+  background: #32425c;
+}
+
+.main-footer-top .footer-contacts {
+  float: left;  
+}
+
+.footer-logo {
+  height: 68px;
+  line-height: 64px;
+}
+
+.main-footer-top .footer-menu {
+  float: right;
+}
+
+.footer-menu ul {
+  margin: 35px 0;
+  text-align: right;
+}
+
+.main-footer-bottom {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background: #293449;
+}
+
+.main-footer-bottom .copy-company {
+  float: left;
+  width: 240px;
+  margin-right: 150px;
+}
+
+.main-footer-bottom .socials {
+  float: left;
+}
+
+.feedback {
+  float: right;
+  width: 300px;
+}
+
+.feedback-item {
+  display: inline-block;
+}
+
+.feedback-item.mail {
+  width: 150px;
+}
+
+.feedback-item.website {
+  margin-left: 40px;
+  width: 110px;
+}
+
+.feedback .link {
+  
 }

@@ -9,21 +9,23 @@
     <header class="main-header">
       <div class="top-menu">
         <div class="container">
-          <a href="index.html" class="site-logo">ТЕХНОМАРТ</a>
-          <label for="search"><i class="icon-search"></i></label>
-          <input id="search" type="search" name="search" placeholder="Поиск:">
-          <a href="#" class="top-menu-action bookmarks">
+          <a href="index.html" class="site-logo">ТЕХНОМАРТ</a><!--
+       --><span class="search-field">
+            <label for="search"><i class="icon-search"></i></label>
+            <input id="search" type="search" name="search" placeholder="Поиск:">
+          </span><!--
+       --><a href="#" class="top-menu-action bookmarks">
             <i class="icon-bookmark"></i>
             Закладки: <span class="counter-bookmarks">0</span>
-          </a>
-          <a href="#" class="top-menu-action cart cart-full">
+          </a><!--
+       --><a href="#" class="top-menu-action cart full">
             <i class="icon-basket"></i>
             Корзина: <span class="counter-cart">10</span>
-          </a>
-          <a href="#" class="top-menu-action make-order-btn">Оформить заказ</a>
+          </a><!--
+       --><a href="#" class="top-menu-action make-order-btn">Оформить заказ</a>
         </div>
       </div>
-      <div class="container main-header-content">
+      <div class="container main-header-content clearfix">
         <section class="site-description">
           <p>
             Интернет-магазин<br>
@@ -43,14 +45,14 @@
             <a href="#" class="site-login-item user-profile">
               <i class="icon-user"></i>
               Равшан Джамшутович
-            </a>
-            <a href="#" class="site-login-item user-logout">
+            </a><!--
+         --><a href="#" class="site-login-item user-logout">
               <i class="icon-logout"></i>
             </a>
-          </div>
-          <div class="user-profile-controls">
-            <a href="#" class="user-btn">Мои заказы</a>
-            <a href="#" class="user-btn">Личный кабинет</a>
+            <div class="user-profile-controls">
+              <a href="#" class="user-btn">Мои заказы</a>
+              <a href="#" class="user-btn">Личный кабинет</a>
+            </div>          
           </div>
         </section>
       </div>
@@ -68,9 +70,9 @@
     </header>
 
     <main class="main-page">
-      <div class="container">
+      <div class="container clearfix">
         <div class="breadcrumbs">
-          <ul>
+          <ul class="horizontal">
             <li><a href="index.html" class="crumb-link home-page">
               <i class="icon-home"></i>Домой</a>
             </li><li>
@@ -156,6 +158,7 @@
             </div>
           </div>
           <section class="products">
+            <div class="index-content-row">
             <article class="product-item">
               <div class="flag"></div>
               <div class="product-image">
@@ -203,7 +206,8 @@
               <div class="old-price"></div>
             <div class="price">12500 р.</div>
             </article>
-
+            </div>
+            <div class="index-content-row">
             <article class="product-item">
               <div class="flag"></div>
               <div class="product-image">
@@ -251,7 +255,8 @@
               <div class="old-price"></div>
             <div class="price">12500 р.</div>
             </article>
-
+            </div>
+            <div class="index-content-row">
             <article class="product-item">
               <div class="flag new-flag"></div>
               <div class="product-image">
@@ -299,6 +304,7 @@
               <div class="old-price"></div>
             <div class="price">12500 р.</div>
             </article>
+            </div>
           </section>
 
           <div class="pagination">
@@ -309,8 +315,6 @@
           </div>
         </section>
       </div>
-
-
       <div class="main-page-info">
         <div class="container">
           <h2>Пара слов о перфораторах</h2>
@@ -319,24 +323,26 @@
           </p>
         </div>
       </div>
+    
 
 
       <!--       ********POPUP ТОВАР В КОРЗИНЕ********       -->
-        <div class="modal-cart">
-          <div class="cross"></div>
-          <span class="cart-message">
-            Товар добавлен в корзину!
-          </span>
-          <div class="cart-btns">
-            <a href="#" class="red-btn make-order-btn">Оформить заказ</a>
-            <a href="#" class="red-btn close-btn">Продолжить покупки</a>
-          </div>
+      <div class="modal-window cart-form">
+        <a href="#" class="cross"></a>
+        <div class="modal-content">
+          <span class="check-icon"></span>
+          Товар добавлен в корзину!
         </div>
+        <div class="modal-btns">
+          <a href="#" class="std-btn make-order-btn">Оформить заказ</a>
+          <a href="#" class="std-btn close-btn">Продолжить покупки</a>
+        </div>
+      </div>  
       <!-- ************************************************* -->
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer-top">
+      <div class="main-footer-top clearfix">
         <div class="container">
           <section class="footer-contacts">
             <a href="index.html" class="site-logo footer-logo">ТЕХНОМАРТ</a>
@@ -366,30 +372,28 @@
           </section>
         </div>
       </div>
-      <div class="main-footer-bottom">
+      <div class="main-footer-bottom clearfix">
         <div class="container">
           <section class="copy-company">
-            <p>
+            <span>
               &#169; 2010–2016 Компания «Техномарт»<br>
               Все права защищены
-            </p>
+            </span>
           </section>
           <section class="socials">
             <a href="#" class="social social-vk" target="_blank">Вконтакте</a>
             <a href="#" class="social social-fb" target="_blank">Facebook</a>
             <a href="#" class="social social-inst" target="_blank">Instagram</a>
           </section>
-          <section class="mail">
-            <p>
-              Обратная связь:<br>
+          <section class="feedback">
+            <div class="feedback-item mail">
+              Обратная связь:
               <a href="mailto:mail@htmlacademy.ru" class="link">mail@htmlacademy.ru</a>
-            </p>
-          </section>
-          <section class="website">
-            <p>
-              Разработано —<br>
+            </div><!--
+         --><div class="feedback-item website">
+              Разработано —
               <a href="http://htmlacademy.ru" class="link">htmlacademy.ru</a>
-            </p>
+            </div>
           </section>
         </div>
       </div>
