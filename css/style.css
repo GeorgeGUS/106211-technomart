@@ -1,7 +1,7 @@
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Cuprum Regular', 'Arial', sans-serif;
+  font-family: 'Cuprum', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 24px;
@@ -127,22 +127,26 @@ button {
 }
 
 .site-contacts {
-  vertical-align: middle;
+  width: 270px;
+  text-align: center;
 }
 
 .phone {
-  box-sizing: border-box;  
+  box-sizing: border-box;
+  display: table-cell;  
+  vertical-align: middle;
+  padding-left: 20px;
   width: 270px;
   height: 45px;
   text-align: center;
   font-size: 21px;
-  line-height: 34px;
   color: #e9292a;
   border: 3px solid #fff;
 }
 
-.site-contacts .address {
-  
+.site-contacts .address,
+.user-profile-controls {
+  margin-top: 5px;
 }
 
 .site-login {
@@ -152,9 +156,9 @@ button {
 
 .site-login-item {
   display: inline-block;
-  height: 45px;
+  line-height: 45px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
   outline: 1px dashed #ccc; /* для наглядности */
 }
 
@@ -167,25 +171,23 @@ button {
   margin-left: 10px;
 }
 
-
-.site-login-registered {
-  line-height: 45px;
-}
 .user-profile {
   width: 260px;
 }
 
 .user-logout {
   width: 40px;
+  height: 45px;
+  line-height: 45px;
 }
 
-.user-profile-controls {
+.user-profile-controls {  
+  height: 100%;
   text-align: left;
 }
 
-.user-profile-controls .user-btn   {
-  padding: 11px 18px;
-  
+.user-profile-controls .user-btn {
+  padding: 11px 18px;  
 }
 
 .main-header-navigation {
