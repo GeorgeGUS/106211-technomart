@@ -36,6 +36,11 @@ ul.horizontal li {
   vertical-align: middle;
 }
 
+ul.horizontal li > a,
+ul.horizontal li > span{
+  display: block;
+}
+
 .std-btn {
   box-sizing: border-box;
   display: inline-block;
@@ -53,7 +58,6 @@ button {
 /* ----------------- MAIN-HEADER ----------------- */
 
 .main-header {
-  min-height: 320px;
   background: #f1f5f7;
 }
 
@@ -97,7 +101,6 @@ button {
 /*  box-sizing: border-box;*/
   padding-top: 46px;
   padding-bottom: 40px;
-  min-height: 70px;
 }
 
 .site-description,
@@ -192,7 +195,6 @@ button {
 
 .main-header-navigation {
   margin-top: 0;
-  min-height: 60px;
   background: #32425c;
 }
 
@@ -428,6 +430,21 @@ button {
   margin-bottom: 35px;
 }
 
+.white-btn,
+.white-wide-btn{
+  display: inline-block;
+  width: 43px;
+  text-align: center;
+  line-height: 43px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.white-wide-btn {
+  width: 140px;
+}
+
 .main-page-info {
   padding-top: 45px;
   padding-bottom: 65px;
@@ -479,7 +496,6 @@ button {
 
 .modal-content {
   box-sizing: border-box;
-  min-height: 170px;
   padding: 50px 80px;
 }
 
