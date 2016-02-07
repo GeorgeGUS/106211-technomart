@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Компания "Техномарт"</title>
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic|PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">    
   </head>
@@ -23,7 +24,7 @@
             <i class="icon-basket"></i>
             Корзина: <span class="counter-cart">0</span>
           </a><!--
-       --><a href="#" class="top-menu-action make-order-btn">Оформить заказ</a>
+       --><a href="#" class="make-order-btn">Оформить заказ</a>
         </div>
       </div>
       <div class="container main-header-content clearfix">
@@ -68,66 +69,85 @@
 
     <main class="main-page">
       <section class="container main-menu">
-        <article class="main-menu-item">
+        <article class="main-menu-item materials">
           <span class="main-menu-item-title">Материалы</span>
           <a href="#" class="main-menu-item-btn">На любой вкус</a>
-          <div class="big-icon icon-paint"></div>
+          <div class="main-menu-item-icon">
+            <i class="big-icon big-icon-paint"></i>
+          </div>
           <div class="flag new-flag"></div>
         </article><!--
-     --><article class="main-menu-item">
+     --><article class="main-menu-item tools">
           <span class="main-menu-item-title">Инструмент</span>
           <a href="#" class="main-menu-item-btn">На все случаи</a>
-          <div class="big-icon icon-drill"></div>
+          <div class="main-menu-item-icon">
+            <i class="big-icon big-icon-drill"></i>
+          </div>
           <div class="flag"></div>
         </article><!--
-     --><article class="main-menu-item">
+     --><article class="main-menu-item technics">
           <span class="main-menu-item-title">Техника</span>
           <a href="#" class="main-menu-item-btn">Для стройки</a>
-          <div class="big-icon icon-tractor"></div>
+          <div class="main-menu-item-icon">
+            <i class="big-icon big-icon-tractor"></i>
+          </div>
           <div class="flag"></div>
         </article><!--
-     --><article class="slider owl-carousel owl-theme owl-loaded">
-          <div class="owl-stage-outer">
-            <div class="owl-stage">
-              <div class="slider-item active">
+        
+     --><article class="slider">
+          <input type="radio" id="dot-1" name="toggle" checked>
+          <input type="radio" id="dot-2" name="toggle">
+          <div class="slider-inner">
+            <div class="slider-slides">
+              <div class="slider-item">
                 <div class="slider-caption">
                   <span class="slide-title">Перфораторы</span>
-                  <p class="slide-slogan">Настоящие мужские игрушки</p>
+                  <span class="slide-slogan">Настоящие мужские игрушки</span>
                 </div>
                 <img src="img/slides/man-with-perforator.jpg" height="266" width="620" alt="Мужик с перфоратором">
               </div>
               <div class="slider-item">
                 <div class="slider-caption">
                   <span class="slide-title">Дрели</span>
-                  <p class="slide-slogan">Соседям на радость!</p>
+                  <span class="slide-slogan">Соседям на радость!</span>
                 </div>
                 <img src="img/slides/man-with-drill.jpg" height="266" width="620" alt="Мужик с дрелью">
               </div>
             </div>
           </div>
-          <div class="owl-nav slider-nav">
-              <span class="owl-prev prev-btn"><i class="icon-left"></i>prev</span>
-              <span class="owl-next next-btn"><i class="icon-right"></i>next</span>
+          <div class="slider-nav">
+              <span class="prev-btn">
+                <label for="dot-1">
+                  <i class="icon-left"></i>prev
+                </label>
+              </span>
+              <span class="next-btn">
+                <label for="dot-2">
+                  <i class="icon-right"></i>next
+                </label>
+              </span>
           </div>
           <div class="slider-controls">            
-            <div class="owl-dots slider-dots">
-              <div class="owl-dot active"><span class="slider-dot"></span></div>
-              <div class="owl-dot"><span class="slider-dot"></span></div>
-            </div>
-            <a href="catalog.html" class="std-btn catalog-btn">Открыть каталог</a>
-          </div>
-          
+            <label for="dot-1"></label>
+            <label for="dot-2"></label>            
+          </div>   
+          <a href="catalog.html" class="std-btn catalog-btn">Открыть каталог</a>       
         </article><!--
-     --><article class="main-menu-item">
+        
+     --><article class="main-menu-item discount">
           <span class="main-menu-item-title">Скидка 50%</span>
           <a href="#" class="main-menu-item-btn">На 350 товаров</a>
-          <div class="big-icon icon-cart"></div>
+          <div class="main-menu-item-icon">
+            <i class="big-icon big-icon-cart"></i>
+          </div>
           <div class="flag"></div>
         </article><!--
-     --><article class="main-menu-item">
+     --><article class="main-menu-item delivery">
           <span class="main-menu-item-title">Доставка</span>
           <a href="#" class="main-menu-item-btn">Бесплатно</a>
-          <div class="big-icon icon-car"></div>
+          <div class="main-menu-item-icon">
+            <i class="big-icon big-icon-car"></i>
+          </div>
           <div class="flag"></div>
         </article>
       </section>
@@ -137,7 +157,7 @@
           <span class="index-content-title">
             Популярные товары:
           </span>
-          <a href="catalog.html" class="std-btn all-products">
+          <a href="catalog.html" class="std-btn all-products-btn">
             Все популярные товары
           </a>
         </header>
@@ -210,7 +230,7 @@
           <span class="index-content-title">
             Популярные производители:
           </span>
-          <a href="catalog.html" class="std-btn all-products">
+          <a href="catalog.html" class="std-btn all-products-btn">
             Все производители
           </a>
         </header>
@@ -235,70 +255,76 @@
             Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="service-tabs">
-            <div class="service-item checked">
-              <input id="delivery" type="radio" name="service" checked>
-              <label for="delivery">Доставка</label>
+          <div class="services-slider">
+            <input id="tab-1" type="radio" name="service" checked>
+            <input id="tab-2" type="radio" name="service">
+            <input id="tab-3" type="radio" name="service">
+            <div class="service-tabs">
+              <label for="tab-1">
+              <span class="service-item">Доставка</span>
+              </label>
+              <label for="tab-2">
+              <span class="service-item">Гарантия</span>
+              </label>
+              <label for="tab-3">
+                <span class="service-item">Кредит</span>
+              </label>
             </div>
-            <div class="service-item">
-              <input id="warranty" type="radio" name="service">
-              <label for="warranty">Гарантия</label>
-            </div>
-            <div class="service-item">
-              <input id="credit" type="radio" name="service">
-              <label for="credit">Кредит</label>
-            </div>
+            <article class="services-wrapper">
+              <div class="service-slides">
+                <section class="service-description service-slide-1">
+                  <div class="service-image delivery"></div>
+                  <div class="service-content">                    
+                    <span class="service-title">Доставка</span>
+                    <p>
+                      Мы с удовольствием доставим ваш товар прямо<br>
+                      к вашему подъезду совершенно бесплатно!<br>
+                      Ведь мы неплохо заработаем,<br>
+                      поднимая его на ваш этаж!
+                    </p>
+                  </div>                  
+                </section>
+                <section class="service-description service-slide-2">
+                  <div class="service-content">
+                    <span class="service-title">Гарантия</span>
+                    <p>
+                      Если купленный у нас товар поломается или заискрит,<br>
+                      а также в случае пожара, спровоцированного его возгаранием,<br>
+                      вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                      сгоревший товар на новый.<br>
+                      Дом уж восстановите как-нибудь сами.
+                    </p>
+                  </div>
+                  <div class="service-image warranty"></div>
+                </section>
+                <section class="service-description service-slide-3">
+                  <div class="service-content">
+                    <span class="service-title">Кредит</span>
+                    <p>
+                      Залезть в долговую яму стало проще!<br>
+                      Кредитные консультанты придут вам на помощь.
+                    </p>
+                    <a href="#" class="btn credit-btn">Отправить заявку</a>
+                  </div>
+                  <div class="service-image credit"></div>
+                </section>
+              </div>
+            </article>
           </div>
-          <section class="service-description delivery">
-            <div class="service-content">
-              <span class="service-title">Доставка</span>
-              <p>
-                Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем,<br>
-                поднимая его на ваш этаж!
-              </p>
-            </div>
-            <div class="service-image service-delivery"></div>
-          </section>
-          <section class="service-description warranty">
-            <div class="service-content">
-              <span class="service-title">Гарантия</span>
-              <p>
-                Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгаранием,<br>
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-                сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибудь сами.
-              </p>
-            </div>
-            <div class="service-image service-warranty"></div>
-          </section>
-          <section class="service-description credit">
-            <div class="service-content">
-              <span class="service-title">Кредит</span>
-              <p>
-                Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.
-              </p>
-              <a href="#" class="btn credit-btn">Отправить заявку</a>
-            </div>
-            <div class="service-image service-credit"></div>
-          </section>
         </div>
       </section>
 
       <section class="container information-content clearfix">
-        <div class="map-image-big">
-          <div class="cross"></div>
-          <img src="img/map-big.jpg" height="446" width="940" alt="">
+        <div class="map-image-big inactive">
+          <a href="#" class="cross"></a>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616195037!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1454870393393" width="940" height="450" frameborder="0"></iframe>
         </div>
         <section class="about-company">
           <h2 class="section-title">Компания «Техномарт»</h2>
-          <p>
+          <p class="section-description">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.
           </p>
-          <p>
+          <p class="section-description">
             Мы можем доставить ваш товар в самые отдаленные точки России!<br>
             Техномарт работает со многими транспортными компаниями:
           </p>
@@ -312,19 +338,19 @@
 
         <section class="contacts">
           <h2 class="section-title">Контакты</h2>
-          <p>
+          <p class="section-description">
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
           <div class="map-image-small">
-            <img src="img/map-mini.jpg" height="158" width="300" alt="">
+            <a href="#" class="map-link"><img src="img/map-mini.jpg" height="158" width="300" alt=""></a>
           </div>          
           <a href="#" class="std-btn">Заблудились? Напишите нам!</a>    
         </section>
       </section>
       
       <!--       ********МОДАЛЬНОЕ ОКНО "ФОРМА ОБРАТНОЙ СВЯЗИ"********       -->  
-      <div class="modal-window contact-form">
+      <div class="modal-window contact-form inactive">
         <a href="#" class="cross"></a>
         <form class="" action="http://echo.htmlacademy.ru" name="user-message" method="post">
           <div class="modal-content">
@@ -350,7 +376,7 @@
       <!-- ************************************************************ -->
 
       <!--       ********МОДАЛЬНОЕ ОКНО "ТОВАР В КОРЗИНЕ"********       -->            
-      <div class="modal-window cart-form">
+      <div class="modal-window cart-form inactive">
         <a href="#" class="cross"></a>
         <div class="modal-content">
           <span class="check-icon"></span>
