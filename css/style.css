@@ -188,6 +188,7 @@ button {
   display: inline-block;
   text-align: left;
   width: 270px;
+  height: 42px;
   font-size: 17px;
 }
 
@@ -219,7 +220,7 @@ button {
 }
 .search-field input:active ~ label,
 .search-field input:focus ~ label{
-  color: red;
+  color: #ee3643;
   background-color: #ffffff;
 }
 .search-field input:active ~ label i,
@@ -232,7 +233,8 @@ button {
   font-size: 17px;
 }
 
-.top-menu-action:hover {
+.search-field:hover,
+.top-menu-action:not(.make-order-btn):hover {
   background-color: #212a3a;
 }
 
@@ -688,29 +690,45 @@ button {
 }
 .action-btn{
   display: block;
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 135px;
   margin: 0 auto;
   margin-bottom: 7px;
-
   font-size: 14px;
   font-family: "Cuprum", sans-serif;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
-
   background-color: #63a63e;
   color: #ffffff;
 }
 
 .action-btn.buy {
+  position: relative;
   padding: 10px 0;
   box-shadow: inset 0 -3px #367315;
 }
 
-.action-btn.buy:hover { background-color: #5fbb2d; }
-.action-btn.buy:active {
+.action-btn.buy:hover,
+.make-order-btn:hover{ 
+  background-color: #5fbb2d; 
+}
+
+.action-btn .icon-basket {
+  position: absolute;
+  left: 13px;
+  font-size: 17px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.action-btn.buy:hover .icon-basket{
+  opacity: 1;
+}
+
+.action-btn.buy:active,
+.make-order-btn:active {
   background-color: #518534;
   box-shadow: none;
 }
@@ -793,6 +811,7 @@ button {
 .section-description {
   margin-bottom: 20px;
 }
+
 /* --------------- service-tabs slider --------------- */
 .service-tabs {
   position: relative;
@@ -882,6 +901,10 @@ button {
   background-repeat: no-repeat;
 }
 
+.credit-btn {
+  width: 195px;
+}
+
 .service-image.delivery {
   background-image: url(../img/services/service-delivery.png);
 }
@@ -914,9 +937,36 @@ button {
   margin-bottom: 85px;
 }
 
+
+.information-content .section-description:last-of-type {
+  margin-bottom: 0;
+}
+
 .information-content .about-company {
   float: left;
   width: 540px;
+}
+
+.transport-company { 
+  margin-bottom: 30px;
+  padding-left: 36px;
+  list-style: none;
+}
+
+.transport-company li {
+  position: relative;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.transport-company li::before{
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 18px;
+  width: 25px;
+  height: 2px;
+  background-color: #fb565a;
 }
 
 .company-btn {
@@ -938,9 +988,12 @@ button {
 }
 
 .map-image-big {
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 940px;
   height: 450px;
+  transform: translate(-50%, -50%);
   box-shadow: 0 0 16px 1px rgba(35, 31, 32, 0.5);
 }
 
@@ -1068,7 +1121,7 @@ button {
 /* ---------------- MAIN-FOOTER ---------------- */
 
 .main-footer {
-/*  margin-top: 85px;*/
+  margin-top: 85px;
 }
 
 .main-footer-top,
@@ -1114,12 +1167,33 @@ button {
   color: #f1f5f7;
 }
 
-.footer-menu-bottom a { color: #ffd180; }
+.footer-menu a:hover,
+.main-footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-menu a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-menu-bottom a,
+.main-footer-bottom a { 
+  text-decoration: none;
+  color: #ffd180; 
+}
 
 .main-footer-bottom {
   padding-top: 35px;
   padding-bottom: 30px;
+  font-size: 16px;
+  color: #ffffff;
   background: #293449;
+}
+
+.main-footer-bottom a:active {
+  text-decoration: none;
+  color: #ee3643;
 }
 
 .main-footer-bottom .copy-company {
@@ -1134,6 +1208,7 @@ button {
 
 .social {
   display: inline-block;
+  vertical-align: top;
   width: 40px;
   height: 40px;
   font-size: 0;
@@ -1141,6 +1216,11 @@ button {
   margin-right: 5px;
   border-radius: 50%;
   background-color: #212a3a;
+}
+
+.social:hover,
+.social:active {
+  background-color: #ee3643;
 }
 
 .social i {
