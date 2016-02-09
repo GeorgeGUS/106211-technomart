@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>"Техномарт": Каталог</title>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic|PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic%7CPT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">    
   </head>
@@ -54,8 +54,11 @@
               <i class="icon-logout"></i>
             </a>
             <div class="user-profile-controls">
-              <a href="#" class="user-btn">Мои заказы</a>
-              <a href="#" class="user-btn">Личный кабинет</a>
+              <ul class="horizontal">
+                <li><a href="#" class="user-btn">Мои заказы</a></li>
+                <li><span class="dot-divider"></span></li>
+                <li><a href="#" class="user-btn">Личный кабинет</a></li>
+              </ul>
             </div>          
           </div>
         </section>
@@ -64,7 +67,7 @@
         <ul class="horizontal">
           <li><a href="index.html" class="nav-item">Главная</a></li>
           <li><a href="#" class="nav-item">Компания</a></li>
-          <li><a href="#" class="nav-item active-link">Каталог</a></li>
+          <li><a href="#" class="nav-item">Каталог</a></li>
           <li><a href="#" class="nav-item">Новости</a></li>
           <li><a href="#" class="nav-item">Спецпредложения</a></li>
           <li><a href="#" class="nav-item">Доставка</a></li>
@@ -78,11 +81,11 @@
         <div class="breadcrumbs">
           <ul class="horizontal">
             <li><a href="index.html" class="crumb-link home-page">
-              <i class="icon-home"></i>Домой</a>
+              <i class="icon-home"></i></a>
             </li><li>
-            <a href="#" class="crumb-link">Каталог</a></li><li><!-- для удаления пробелов -->
+            <a href="catalog.html" class="crumb-link">Каталог</a></li><li><!-- для удаления пробелов -->
             <a href="#" class="crumb-link">Инструмент</a></li><li>
-            <span class="crumb-link">Перфораторы</span></li>
+            <span class="crumb-link active">Перфораторы</span></li>
           </ul>
         </div>
 
@@ -115,49 +118,56 @@
               </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="company-filter">
             <legend>Производители:</legend>
             <ul>
               <li>
-                <label><input type="checkbox" name="company" value="Bosch" checked>Bosch</label>
+                <input id="check-1" type="checkbox" name="company" value="Bosch" checked>
+                <label for="check-1">Bosch</label>
               </li>
               <li>
-                <label><input type="checkbox" name="company" value="Интерскол">Интерскол</label>
+                <input id="check-2" type="checkbox" name="company" value="Интерскол">
+                <label for="check-2">Интерскол</label>
               </li>
               <li>
-                <label><input type="checkbox" name="company" value="Makita" checked>Makita</label>
+                <input id="check-3" type="checkbox" name="company" value="Makita" checked>
+                <label for="check-3">Makita</label>
               </li>
               <li>
-                <label><input type="checkbox" name="company" value="Dewalt">Dewalt</label>
+                <input id="check-4" type="checkbox" name="company" value="Dewalt">
+                <label for="check-4">Dewalt</label>
               </li>
               <li>
-                <label><input type="checkbox" name="company" value="Hitachi">Hitachi</label>
+                <input id="check-5" type="checkbox" name="company" value="Hitachi">
+                <label for="check-5">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="power-filter">
             <legend>Питание:</legend>
             <ul>
               <li>
-                <label><input type="radio" name="power" value="accumulator" checked>Аккумуляторные</label>
+                <input id="power-1" type="radio" name="power" value="accumulator" checked>
+                <label for="power-1">Аккумуляторные</label>
               </li>
               <li>
-                <label><input type="radio" name="power" value="mains-supply">Сетевые</label>
+                <input id="power-2" type="radio" name="power" value="mains-supply">
+                <label for="power-2">Сетевые</label>
               </li>
             </ul>
           </fieldset>
-            <button type="submit" class="white-wide-btn">Показать</button>
+            <button class="transparent-btn wide">Показать</button>
           </form>
         </section>
 
         <section class="right-column">
           <div class="column-header">
             <span class="filter-title">Сортировка:</span>
-            <a href="#" class="sort-name">По цене</a>
+            <a href="#" class="sort-name active">По цене</a>
             <a href="#" class="sort-name">По типу</a>
             <a href="#" class="sort-name">По функционалу</a>
             <div class="sort-direction">
-              <a href="#" class="asc selected"><i class="icon-up-dir"></i></a>
+              <a href="#" class="asc arrow-selected"><i class="icon-up-dir"></i></a>
               <a href="#" class="desc"><i class="icon-down-dir"></i></a>
             </div>
           </div>
@@ -330,10 +340,10 @@
           </section>
 
           <div class="pagination">
-            <a href="#" class="white-btn page active">1</a>
-            <a href="#" class="white-btn page">2</a>
-            <a href="#" class="white-btn page">3</a>
-            <a href="#" class="white-wide-btn page">Следующая</a>
+            <span class="page current">1</span>
+            <a href="#" class="page">2</a>
+            <a href="#" class="page">3</a>
+            <a href="#" class="transparent-btn">Следующая</a>
           </div>
         </section>
       </div>
