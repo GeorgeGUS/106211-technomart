@@ -1391,8 +1391,8 @@ button {
 }
 
 .pagination {
-  margin-top: 50px;
-  margin-bottom: 35px;
+  margin-top: 55px;
+  margin-bottom: 60px;
 }
 
 .page,
@@ -1441,7 +1441,6 @@ button {
 .main-page-info h2 {
   margin-bottom: 30px;
 }
-
 
 /*____________________КОНЕЦ СТРАНИЦЫ КАТАЛОГА__________________*/
 
@@ -1511,17 +1510,12 @@ button {
 
 /* ---------------- MAIN-FOOTER ---------------- */
 
-.main-footer {
-  margin-top: 85px;
-}
-
 .main-footer-top,
 .main-footer-top p {
   font-size: 18px;
   font-family: "Cuprum", sans-serif;
   line-height: 24px;
   color: #f1f5f7;
-  /*  min-height: 193px;*/
   background: #32425c;
 }
 
