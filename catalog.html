@@ -97,24 +97,21 @@
           <div class="column-header">
             <span class="filter-title">Фильтр:</span>
           </div>
-          <form class="filters" action="http://echo.htmlacademy.ru" method="post">
+          <form class="filters" action="http://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена:</legend>
             <div class="range-filter">
-              <div class="range-input">
-                <div class="range-scale">
-                  <div class="range-bar"></div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
                 </div>
-                <div class="range-slider low-limit"></div>
-                <div class="range-slider high-limit"></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
               </div>
               <div class="price-controls">
-                <div class="min-price-container">
-                  от <input class="min-price" type="text" name="min-price" value="0">
-                </div>
-                <div class="max-price-container">
-                  до <input class="max-price" type="text" name="max-price" value="30000">
-                </div>
+                <label class="min-price">от<input type="text" name="min-price" value="0"></label>
+                <span class="price-divider"> — </span>
+                <label class="max-price">до<input type="text" name="max-price" value="30000"></label>
               </div>
             </div>
           </fieldset>
