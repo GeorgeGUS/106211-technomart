@@ -1301,6 +1301,14 @@ button {
   font-family: "symbols-technomart";
 }
 
+.left-column li:hover label::before {
+  color: #b5b5b5;
+}
+
+.left-column input:disabled ~ label {
+  opacity: 0.3;
+}
+
 .left-column input[type="checkbox"],[type="radio"] {
   display: none;
 }
@@ -1350,6 +1358,11 @@ button {
   border-bottom: 1px dotted #ee3643;  
 }
 
+.sort-name:hover {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
 .sort-name.active {
   color: #ee3643;
   border: none;
@@ -1368,7 +1381,12 @@ button {
   color: #c6c2bd;
 }
 
-.arrow-selected i[class^="icon-"]{
+.sort-direction i[class^="icon-"]:hover {
+  color: #000000;
+}
+
+.arrow-selected i[class^="icon-"],
+.arrow-selected i[class^="icon-"]:hover{ /* чтобы активная стрелка не менялась */
   color: #ee3643;
 }
 
