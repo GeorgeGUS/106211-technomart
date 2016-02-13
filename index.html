@@ -349,17 +349,17 @@
           <div class="map-image-small">
             <a href="#" class="map-link"><img src="img/map-mini.jpg" height="158" width="300" alt=""></a>
           </div>          
-          <a href="#" class="std-btn map-btn">Заблудились? Напишите нам!</a>  
+          <a href="#" class="std-btn feedback-btn">Заблудились? Напишите нам!</a>  
         </section>
-        <div class="map-image-big inactive">
-          <a href="#" class="cross"></a>
+        <div class="modal-window map-image-big">
+          <a href="#" class="close-btn"></a>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616195037!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1454870393393" width="940" height="450"></iframe>
         </div>
       </section>
       
       <!--       ********МОДАЛЬНОЕ ОКНО "ФОРМА ОБРАТНОЙ СВЯЗИ"********       -->  
-      <div class="modal-window contact-form inactive">
-        <a href="#" class="cross"></a>
+      <div class="modal-window feedback-form">
+        <a href="#" class="close-btn"></a>
         <form action="http://echo.htmlacademy.ru" method="post">
           <div class="modal-content">
             <div class="half-width">
@@ -384,8 +384,8 @@
       <!-- ************************************************************ -->
 
       <!--       ********МОДАЛЬНОЕ ОКНО "ТОВАР В КОРЗИНЕ"********       -->            
-      <div class="modal-window cart-form inactive">
-        <a href="#" class="cross"></a>
+      <div class="modal-window cart-form">
+        <a href="#" class="close-btn"></a>
         <div class="modal-content">
           <span class="cart-icon"></span>
           <span class="cart-title">Товар добавлен в корзину!</span>
@@ -455,5 +455,56 @@
         </div>
       </div>
     </footer>
+    
+    <script>      
+      var mapLink = document.querySelector(".map-link");
+      var mapWindow = document.querySelector(".map-image-big");
+      
+      var feedbackBtn = document.querySelector(".feedback-btn");
+      var feedbackWindow = document.querySelector(".feedback-form");
+      var userName = feedbackWindow.querySelector("[name=user-name]");
+      
+      var buyBtn = document.querySelectorAll(".buy");
+      var cartWindow = document.querySelector(".cart-form");  
+      var closeCart = document.querySelector(".cart-btn.white");
+      
+      var popup = document.querySelectorAll(".modal-window");      
+      var closeBtn = document.querySelectorAll(".close-btn");      
+      
+      mapLink.addEventListener("click", function(event){
+        event.preventDefault();
+        mapWindow.classList.add("modal-active");
+      });
+      
+      feedbackBtn.addEventListener("click", function(event){
+        event.preventDefault();
+        feedbackWindow.classList.add("modal-active");
+        userName.focus();
+      });
+      
+      for (var n=0; n<buyBtn.length; n++){
+        buyBtn[n].addEventListener("click", function(event){
+          event.preventDefault();
+          cartWindow.classList.add("modal-active");
+        });
+      }
+      
+      closeCart.addEventListener("click", function(event){
+        event.preventDefault();
+        for (var j=0; j<popup.length; j++){
+          popup[j].classList.remove("modal-active");
+        }
+      });
+      
+      for (var i=0; i<popup.length; i++){
+        closeBtn[i].addEventListener("click", function(event){
+          event.preventDefault();
+          for (var j=0; j<popup.length; j++){
+            popup[j].classList.remove("modal-active");
+          }
+        });
+      }      
+      
+    </script>
   </body>
 </html>
