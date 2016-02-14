@@ -746,29 +746,25 @@ button {
 
 .product-item,
 .brand {
-  box-sizing: border-box;
   position: relative;
   display: inline-block;
   vertical-align: top;
-  margin-right: 16px;
-  width: 220px;
-  outline: 1px solid #e5e5e5;
+  margin-right: 17px;
+  width: 218px;
+	text-align: center;
+  border: 1px solid #e5e5e5;
 }
 
-.product-item {
-  padding: 20px;
-  padding-top: 5px;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: bold;
+.product-item {  
+	font-size: 17px;
+  font-weight: 700;
   font-family: "PT Sans", sans-serif;
-  text-align: center;
   background-color: #ffffff;
 }
 
 .product-item:hover,
 .brand:hover {
-  outline: none;
+  border-color: #ffffff;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
@@ -780,9 +776,59 @@ button {
   opacity: 0.3;
 }
 
+.product-item .flag {
+  top: -1px;
+  right: -1px;
+}
+
 .product-image {
-  width: 180px;
-  height: 160px;
+  width: 218px;
+  height: 168px;
+	overflow: hidden;
+}
+
+.product-image img {
+		max-width: 100%;
+}
+
+.product-name {
+  min-height: 20px;
+  padding: 0 25px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+	margin-bottom: 15x;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.old-price {
+	min-height: 25px;
+	margin-bottom: 5px;
+  text-transform: uppercase;
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.price {
+  position: relative;
+  width: 80px;
+  margin: 0 auto 20px;
+  padding: 8px 28px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-radius: 3px;
+  background: #ee3643;  
+}
+
+.price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 0;
+  height: 0;
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
 }
 
 .actions {
@@ -796,7 +842,7 @@ button {
   left: 0;
   width: 218px;
   height: 88px;
-  padding: 40px 0;
+  padding: 43px 0;
   background-color: #ffffff;
   z-index: 10;
 }
@@ -863,48 +909,11 @@ button {
   opacity: 0.3;
 }
 
-.product-name,
-.old-price {
-  min-height: 20px;
-  padding: 0 10px;
-  margin: 10px 0;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-.old-price {
-  text-transform: uppercase;
-  text-decoration: line-through;
-  color: #999999;
-}
-
-.price {
-  position: relative;
-  width: 80px;
-  margin: 0 auto;
-  padding: 11px 30px;
-  text-transform: uppercase;
-  color: white;
-  background: #ee3643;
-  border-radius: 3px;
-}
-
-.price::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -20px;
-  width: 0;
-  height: 0;
-  border: 20px solid white;
-  border-left-color: #ee3643;
-}
-
 
 /* --------------- product-item end --------------- */
 
 .brand {
-  height: 145px;
+  height: 143px;
 }
 
 .brand img {
@@ -918,12 +927,12 @@ button {
 
 .product-item:last-of-type,
 .brand:nth-of-type(4n) {
-  margin-right: 0;
+  margin-right: -1px;
 }
 
 .services {
   margin-top: 85px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
   padding-top: 62px;
   background-color: #f2f6f8;
 }
@@ -1068,7 +1077,6 @@ button {
 
 .information-content {
   position: relative;
-  margin-top: 80px;
   margin-bottom: 85px;
 }
 
@@ -1082,7 +1090,7 @@ button {
 }
 
 .transport-company {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding-left: 36px;
   list-style: none;
 }
@@ -1113,7 +1121,8 @@ button {
 }
 
 .map-image-small {
-  margin: 40px 0;
+  margin-top: 30px;
+  margin-bottom: 40px;
   height: 158px;
 }
 
@@ -1411,7 +1420,7 @@ button {
 }
 
 .pagination {
-  margin-top: 55px;
+  margin-top: 50px;
   margin-bottom: 60px;
 }
 
@@ -1453,13 +1462,13 @@ button {
 }
 
 .main-page-info {
-  padding-top: 45px;
-  padding-bottom: 65px;
+  padding-top: 40px;
+  padding-bottom: 57px;
   background: #f2f6f8;
 }
 
 .main-page-info h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 
@@ -1625,7 +1634,7 @@ label[for="user-message"] {
 
 .footer-logo {
   margin-bottom: 18px;
-  padding: 17px 0;
+  padding: 17px 0 14px;
   font-size: 30px;
   line-height: 1;
 }
@@ -1673,6 +1682,7 @@ label[for="user-message"] {
   padding-bottom: 30px;
   font-size: 16px;
   color: #ffffff;
+  line-height: 18px;
   background: #293449;
 }
 
