@@ -505,6 +505,15 @@
         });
       }      
       
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          for (var j=0; j<popup.length; j++){
+            if (popup[j].classList.contains("modal-active")) {
+              popup[j].classList.remove("modal-active");
+            }
+          }
+        }
+      });
     </script>
   </body>
 </html>
