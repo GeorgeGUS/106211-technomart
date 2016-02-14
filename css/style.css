@@ -69,7 +69,7 @@ body {
 
 h1 {
   font-size: 30px;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 400;
   text-transform: uppercase;
   color: #32425c;
@@ -157,9 +157,9 @@ button {
 .make-order-btn {
   box-sizing: border-box;
   display: inline-block;
-  padding: 8px 5px;
+  padding: 9px 5px;
   font-size: 17px;
-  line-height: 26px;
+  line-height: 24px;
   text-decoration: none;
   color: #ffffff;
   vertical-align: top;
@@ -176,7 +176,7 @@ button {
 }
 
 .top-menu i {
-  margin: 0 12px;
+  margin: 0 11px;
   opacity: 0.3;
 }
 
@@ -194,8 +194,8 @@ button {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: 35px;
-  width: 200px;
+  left: 50px;
+  width: 210px;
   height: 40px;
   border: none;
   background-color: #293449;
@@ -214,6 +214,10 @@ button {
   left: 0;
   width: 270px;
   line-height: 42px;
+}
+
+.search-field i {
+	margin-left: 18px;
 }
 
 .top-menu-action {
@@ -318,7 +322,7 @@ button {
 .phone .icon-phone {
   position: absolute;
   color: #b7bfc8;
-  left: 7px;
+  left: 10px;
 }
 
 .phone-number {
@@ -359,8 +363,19 @@ button {
 .user-profile:hover {
   color: #000000;
 }
-/* не получается изменить цвет иконки */
-.site-login-item:active{
+
+.site-login-item i {
+	margin-left: 5px;
+	margin-right: 5px;
+  color: #c5c5c5;
+}
+
+.site-login-item:hover i {
+  color: #32425c;
+}
+
+.site-login-item:active,
+.site-login-item:active i {
   color: rgba(0, 0, 0, 0.3); 
 }
 
@@ -369,53 +384,49 @@ button {
   padding-right: 15px;
 }
 
-.site-login-item i {
-  color: #c5c5c5;
-}
-
-.site-login-item:hover i {
-  color: #32425c;
-}
-
 .site-login-registration {
   width: 150px;
   margin-left: 10px;
 }
 
 .user-profile {
+	text-align: left;
   width: 260px;
+}
+
+.user-profile .icon-user {
+	font-size: 19px;
+	margin-left: 15px;
+  margin-right: 8px;
 }
 
 .user-logout {
   width: 40px;
 }
 
-.icon-user {
-  margin-left: -20px;
-  margin-right: 5px;
-}
-
 .user-profile-controls {
+	margin-bottom: -2px;
+	padding-left: 7px;
   text-align: left;
 }
 
 .user-profile-controls .user-btn { 
-  padding: 0px 13px;
+  padding: 0px 12px;
   font-size: 16px;  
   color: #32425c;
 }
 
 .dot-divider {
   position: relative;
-  display: block;
-  width: 4px;
-  height: 20px;
+  display: block; 
+	margin-right: -3px;
+	width: 4px;
 }
 
 .dot-divider::after {
   content: "";
   position: absolute;
-  top: 0.6em;
+  top: 0.7em;
   right: 0;
   width: 4px;
   height: 4px;
@@ -443,7 +454,7 @@ button {
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  line-height: 19px;
+  line-height: 20px;
   padding: 20px 30px;
 }
 
@@ -1123,8 +1134,9 @@ button {
 
 .crumb-link {
   position: relative;
-  padding-right: 30px;
+  padding-right: 42px;
   font-size: 13px;
+	font-family: "PT Sans", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
@@ -1133,7 +1145,7 @@ button {
 .crumb-link::after {
   content: "\3e";
   position: absolute;
-  right: 13px;
+  right: 20px;
   top: -1px;
   font-size: 14px;
   font-family: "symbols-technomart";
@@ -1153,6 +1165,7 @@ button {
   margin-bottom: 20px;
   background: #f2f6f8;
 }
+
 /*----------основной контент-----------*/
 .left-column{
   float: left;
@@ -1164,7 +1177,7 @@ button {
 
 .column-header {
   position: relative;
-  padding: 8px 15px;  
+  padding: 7px 20px;  
   font-family: "PT Sans", sans-serif;  
   text-transform: uppercase;
   border-radius: 3px;
@@ -1172,9 +1185,13 @@ button {
 }
 
 .left-column fieldset {
-  padding: 5px 0;
-  margin: 15px 0;
-  border: 0;
+	padding: 0;
+	padding-bottom: 10px;
+	margin: 0;
+  margin-top: 10px;
+	margin-bottom: 14px;
+	width: 220px;
+  border: 0;	
 }
 
 .left-column fieldset:not(:last-of-type) {
@@ -1197,9 +1214,9 @@ button {
 
 .left-column li {
   position: relative;
-  margin: 15px 0;
+  margin: 10px 0;
   margin-left: 35px;
-  line-height: 20px;
+  line-height: 30px;
 }
 /*-----------RANGE-FILTER-------------*/
 
@@ -1214,7 +1231,7 @@ button {
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   border-radius: 5px;
   background: #f7f3ec;
 }
@@ -1244,7 +1261,7 @@ button {
 }
 
 .range-controls .toggle-min {
-  left: 10px;
+  left: 20px;
 }
 
 .range-controls .toggle-max {
@@ -1260,17 +1277,20 @@ button {
   display: inline-block;
 }
 
-.price-divider {
-  font-size: 16px;
+.price-divider {  
   display: inline-block;
   width: 30px;
+	font-size: 16px;
   text-align: center;
 }
 
 .price-controls input {
-  font-size: 16px;
-  width: 95px;
-  padding: 8px 0;
+	padding: 0;
+  padding-top: 8px;
+	padding-bottom: 12px;
+  width: 95px;  
+	font-size: 17px;
+	line-height: 18px;
   text-align: center;
   color: #283136;
   border: none;
@@ -1331,7 +1351,7 @@ button {
 }
 
 .left-column .transparent-btn {
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 0;
   outline: none;
 }
@@ -1342,16 +1362,20 @@ button {
 }
 
 .right-column .filter-title {
-  margin-right: 75px;
+  margin-right: 135px;
 }
 
 .right-column .sort-name {
   display: inline-block;
-  margin-left: 65px;
+  margin-right: 65px;
   line-height: 1.2;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #ee3643;  
+}
+
+.sort-name:last-of-type {
+	margin-right: 40px;
 }
 
 .sort-name:hover {
@@ -1368,10 +1392,10 @@ button {
   position: absolute;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 35px;
 }
 
 .sort-direction i[class^="icon-"] {
+	margin-right: 6px;	
   font-size: 23px;
   line-height: 1;
   color: #c6c2bd;
@@ -1395,13 +1419,13 @@ button {
 .transparent-btn {
   display: inline-block;
   margin-right: 6px;
-  width: 43px;
+  width: 36px;
   text-align: center;
   font-size: 13px;
   font-family: "PT Sans", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 43px;
+  line-height: 36px;
   color: #000000;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
