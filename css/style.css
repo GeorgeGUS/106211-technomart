@@ -1476,6 +1476,22 @@ button {
   margin-bottom: 20px;
 }
 
+/* ---------------- АНИМАЦИЯ ПОЯВЛЕНИЯ ПОПАПА ---------------- */
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /* ------------------ МОДАЛЬНЫЕ ОКНА ------------------- */
 
@@ -1485,13 +1501,11 @@ button {
   position: fixed;
   top: 50%;
   left: 50%;  
+/*
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);  
-}
-
-.modal-active {
-  display: block;
+*/
 }
 
 .close-btn {
@@ -1512,7 +1526,9 @@ button {
 
 /* ------------------ ОКНО КАРТЫ ------------------- */
 
-.map-image-big {  
+.map-image-big { 
+  margin-top: -225px;
+  margin-left: -470px;
   width: 940px;
   height: 450px;
   box-shadow: 0 0 16px 1px rgba(35, 31, 32, 0.5);
@@ -1531,6 +1547,8 @@ button {
 .cart-form,
 .feedback-form {
   box-sizing: border-box;
+  margin-left: -310px;
+  margin-top: -220px;
   width: 620px;
   background: #fff;
   box-shadow: 
@@ -1621,6 +1639,12 @@ label[for="user-message"] {
 .send-contact-form {
   width: 100%;
 }
+
+.modal-active {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 
 /* ---------------- MAIN-FOOTER ---------------- */
 
