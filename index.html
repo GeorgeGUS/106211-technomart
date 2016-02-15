@@ -11,7 +11,7 @@
     <header class="main-header">
       <div class="top-menu">
         <div class="container">
-          <span class="site-logo">ТЕХНОМАРТ</span><!--
+          <a href="index.html" class="site-logo">ТЕХНОМАРТ</a><!--
        --><form class="search-field" action="http://echo.htmlacademy.ru" method="get">
             <input id="search" type="search" name="search" placeholder="Поиск:">
             <label for="search"><i class="icon-search"></i></label>
@@ -363,21 +363,21 @@
         <form action="http://echo.htmlacademy.ru" method="post">
           <div class="modal-content">
             <div class="half-width">
-              <label for="user-name">Ваше имя:</label><br>
-              <input id="user-name" type="text" name="user-name"
+              <label for="customer-name">Ваше имя:</label><br>
+              <input id="customer-name" type="text" name="customer-name"
                 placeholder="Представьтесь, пожалуйста">
             </div>
             <div class="half-width">
-              <label for="user-email">Ваш e-mail:</label><br>
-              <input id="user-email" type="text" name="user-email"
+              <label for="customer-email">Ваш e-mail:</label><br>
+              <input id="customer-email" type="text" name="customer-email"
                 placeholder="Для отправки ответа">
             </div>
-            <label for="user-message">Текст письма:</label><br>
-            <textarea id="user-message" rows="5" name="user-message"
+            <label for="customer-message">Текст письма:</label><br>
+            <textarea id="customer-message" rows="5" name="customer-message"
               placeholder="В свободной форме"></textarea>
           </div>
           <div class="modal-btns">
-            <button class="std-btn send-contact-form">Отправить</button>
+            <button class="std-btn send-contact-form" type="submit">Отправить</button>
           </div>
         </form>
       </div> 
@@ -402,7 +402,7 @@
       <div class="main-footer-top clearfix">
         <div class="container">
           <section class="footer-contacts">
-            <span class="site-logo footer-logo">ТЕХНОМАРТ</span>
+            <a href="index.html" class="site-logo footer-logo">ТЕХНОМАРТ</a>
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               +7 (812) 555-05-55
@@ -461,8 +461,11 @@
       var mapWindow = document.querySelector(".map-image-big");
       
       var feedbackBtn = document.querySelector(".feedback-btn");
-      var feedbackWindow = document.querySelector(".feedback-form");
-      var userName = feedbackWindow.querySelector("[name=user-name]");
+      var feedbackWindow = document.querySelector(".feedback-form");       
+      var form = feedbackWindow.querySelector("form");
+      var nameCust = feedbackWindow.querySelector("[name=customer-name]");
+      var emailCust = feedbackWindow.querySelector("[name=customer-email]");
+      var messageCust = feedbackWindow.querySelector("[name=customer-message]");
       
       var buyBtn = document.querySelectorAll(".buy");
       var cartWindow = document.querySelector(".cart-form");  
@@ -479,7 +482,7 @@
       feedbackBtn.addEventListener("click", function(event){
         event.preventDefault();
         feedbackWindow.classList.add("modal-active");
-        userName.focus();
+        nameCust.focus();
       });
       
       for (var n=0; n<buyBtn.length; n++){
@@ -513,7 +516,14 @@
             }
           }
         }
-      });
+      });     
+      
+      form.addEventListener("submit", function(event) {
+        if (!nameCust.value || !emailCust.value || !messageCust.value) {
+          event.preventDefault();
+          feedbackWindow.classList.add("modal-error");
+        }
+      });      
     </script>
   </body>
 </html>
