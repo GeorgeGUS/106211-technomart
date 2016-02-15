@@ -1490,7 +1490,7 @@ button {
   margin-bottom: 20px;
 }
 
-/* ---------------- АНИМАЦИЯ ПОЯВЛЕНИЯ ПОПАПА ---------------- */
+/* ---------------- АНИМАЦИИ ДЛЯ ПОПАПОВ ---------------- */
 
 @keyframes bounce {
   0%   {
@@ -1507,6 +1507,18 @@ button {
   }
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 /* ------------------ МОДАЛЬНЫЕ ОКНА ------------------- */
 
 .modal-window {
@@ -1514,12 +1526,7 @@ button {
   z-index: 500;
   position: fixed;
   top: 50%;
-  left: 50%;  
-/*
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);  
-*/
+  left: 50%;
 }
 
 .close-btn {
@@ -1599,10 +1606,6 @@ button {
   background: #ffffff;
 }
 
-.cart-btn.white:hover { /*-<<<<<---В макете нет состояний для этой кнопки*/
-  background: ; 
-}
-
 /* -------------- ОКНО ФОРМЫ ОБРАТНОЙ СВЯЗИ --------------- */
 
 .feedback-form .modal-content {
@@ -1659,6 +1662,9 @@ label[for="user-message"] {
   animation: bounce 0.6s;
 }
 
+.modal-error {
+  animation: shake 0.6s;
+}
 
 /* ---------------- MAIN-FOOTER ---------------- */
 
