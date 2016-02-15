@@ -294,7 +294,6 @@ button {
 .site-description p {
   margin: 0;
   padding: 3px 0 0 53px;
-  /* 100% совпадает с макетом */
   font-style: italic;
   font-size: 16px;
   font-family: "Cuprum", sans-serif;
@@ -372,7 +371,8 @@ button {
 }
 
 .site-login-item:active,
-.site-login-item:active i {
+.site-login-item:active i,
+.site-login-item:active .user-name{
   color: rgba(0, 0, 0, 0.3); 
 }
 
