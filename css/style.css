@@ -321,8 +321,9 @@ button {
 
 .phone .icon-phone {
   position: absolute;
-  color: #b7bfc8;
   left: 10px;
+  font-size: 22px;
+  color: #b7bfc8;
 }
 
 .phone-number {
@@ -348,7 +349,7 @@ button {
   box-sizing: border-box;
   display: inline-block;
   font-size: 21px;
-  padding: 11px 0;
+  padding: 11px 0 10px;
   text-align: center;
   text-decoration: none;
   color: #000000;
@@ -358,10 +359,6 @@ button {
 
 .site-login-item:hover {
   color: #ee3643;
-}
-
-.user-profile:hover {
-  color: #000000;
 }
 
 .site-login-item i {
@@ -389,45 +386,57 @@ button {
   margin-left: 10px;
 }
 
+.site-login-registered {
+  position: relative;
+}
+
 .user-profile {
-	text-align: left;
-  width: 260px;
+  text-align: left;
+  width: 300px;
+}
+
+.user-profile:hover {
+  color: #000000;
 }
 
 .user-profile .icon-user {
-	font-size: 19px;
-	margin-left: 15px;
+	 font-size: 19px;
+	 margin-left: 15px;
   margin-right: 8px;
 }
 
 .user-logout {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 40px;
+  height: 45px;
+  font-size: 22px;
 }
 
 .user-profile-controls {
-	margin-bottom: -2px;
-	padding-left: 7px;
+	 margin-bottom: -2px;
+	 padding-left: 5px;
   text-align: left;
 }
 
 .user-profile-controls .user-btn { 
-  padding: 0px 12px;
+  padding: 0px 13px;
   font-size: 16px;  
   color: #32425c;
 }
 
 .dot-divider {
   position: relative;
-  display: block; 
-	margin-right: -3px;
-	width: 4px;
+  display: block;
+	 width: 0;
 }
 
 .dot-divider::after {
   content: "";
   position: absolute;
-  top: 0.7em;
-  right: 0;
+  top: 0.8em;
+  left: 0px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -454,8 +463,8 @@ button {
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  line-height: 20px;
-  padding: 20px 30px;
+  line-height: 1;
+  padding: 20px 30px 23px;
 }
 
 .main-header-navigation a:hover {
@@ -470,7 +479,7 @@ button {
 /* -------------- MAIN-PAGE-C0NTENT -------------- */
 
 .main-menu {
-  margin-top: 60px;
+  margin-top: 59px;
   margin-bottom: 35px;
 }
 
@@ -1085,6 +1094,10 @@ button {
   margin-bottom: 85px;
 }
 
+.information-content .section-description {
+  margin-bottom: 24px;
+}
+
 .information-content .section-description:last-of-type {
   margin-bottom: 0;
 }
@@ -1095,7 +1108,7 @@ button {
 }
 
 .transport-company {
-  margin-bottom: 27px;
+  margin-bottom: 24px;
   padding-left: 36px;
   list-style: none;
 }
@@ -1148,9 +1161,9 @@ button {
 
 .crumb-link {
   position: relative;
-  padding-right: 42px;
+  padding-right: 40px;
   font-size: 13px;
-	font-family: "PT Sans", sans-serif;
+	 font-family: "PT Sans", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
@@ -1159,8 +1172,8 @@ button {
 .crumb-link::after {
   content: "\3e";
   position: absolute;
-  right: 20px;
-  top: -1px;
+  top: 0;
+  right: 20px;  
   font-size: 14px;
   font-family: "symbols-technomart";
   color: #c1c6ce;
@@ -1171,11 +1184,12 @@ button {
 }
 
 .icon-home {
+  font-size: 16px;
   color: #c1c6ce;
 }
 
 .main-page-caption {
-  padding: 10px 30px;
+  padding: 9px 30px 10px;
   margin-bottom: 20px;
   background: #f2f6f8;
 }
