@@ -354,21 +354,19 @@
         </div>
       </div>
     
-
-
-      <!--       ********POPUP ТОВАР В КОРЗИНЕ********       -->
-      <div class="modal-window cart-form inactive">
-        <a href="#" class="cross"></a>
+      <!--       ********МОДАЛЬНОЕ ОКНО "ТОВАР В КОРЗИНЕ"********       -->            
+      <div class="modal-window cart-form">
+        <a href="#" class="close-btn"></a>
         <div class="modal-content">
-          <span class="check-icon"></span>
-          Товар добавлен в корзину!
+          <span class="cart-icon"></span>
+          <span class="cart-title">Товар добавлен в корзину!</span>
         </div>
         <div class="modal-btns">
-          <a href="#" class="std-btn make-order-btn">Оформить заказ</a>
-          <a href="#" class="std-btn close-btn">Продолжить покупки</a>
+          <a href="#" class="std-btn cart-btn">Оформить заказ</a>
+          <a href="#" class="std-btn cart-btn white">Продолжить покупки</a>
         </div>
-      </div>  
-      <!-- ************************************************* -->
+      </div>      
+      <!-- ************************************************************ -->
     </main>
 
     <footer class="main-footer">
@@ -428,5 +426,47 @@
         </div>
       </div>
     </footer>
+    
+    <script>       
+      var buyBtn = document.querySelectorAll(".buy");
+      var cartWindow = document.querySelector(".cart-form");  
+      var closeCart = document.querySelector(".cart-btn.white");
+      
+      var popup = document.querySelectorAll(".modal-window");      
+      var closeBtn = document.querySelectorAll(".close-btn");      
+            
+      for (var n=0; n<buyBtn.length; n++){
+        buyBtn[n].addEventListener("click", function(event){
+          event.preventDefault();
+          cartWindow.classList.add("modal-active");
+        });
+      }
+      
+      closeCart.addEventListener("click", function(event){
+        event.preventDefault();
+        for (var j=0; j<popup.length; j++){
+          popup[j].classList.remove("modal-active");
+        }
+      });
+      
+      for (var i=0; i<popup.length; i++){
+        closeBtn[i].addEventListener("click", function(event){
+          event.preventDefault();
+          for (var j=0; j<popup.length; j++){
+            popup[j].classList.remove("modal-active");
+          }
+        });
+      }      
+      
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          for (var j=0; j<popup.length; j++){
+            if (popup[j].classList.contains("modal-active")) {
+              popup[j].classList.remove("modal-active");
+            }
+          }
+        }
+      });
+    </script>
   </body>
 </html>
