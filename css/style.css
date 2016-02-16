@@ -89,18 +89,18 @@ p {
   line-height: 24px;
 }
 
-ul.horizontal {
+.horizontal {
   margin: 0;
   padding: 0;
 }
 
-ul.horizontal li {
+.horizontal li {
   display: inline-block;
   vertical-align: top;
 }
 
-ul.horizontal li > a,
-ul.horizontal li > span {
+.horizontal li > a,
+.horizontal li > span {
   display: block;
 }
 
@@ -109,6 +109,7 @@ ul.horizontal li > span {
   box-sizing: border-box;
   display: inline-block;
   padding: 0 20px;
+  font-size: 14px;
   line-height: 38px;
   text-align: center;
   text-decoration: none;
@@ -425,7 +426,7 @@ button {
 }
 
 .user-profile-controls .user-btn {
-  padding: 0px 13px;
+  padding: 0 13px;
   font-size: 16px;
   color: #32425c;
 }
@@ -440,7 +441,7 @@ button {
   content: "";
   position: absolute;
   top: 0.8em;
-  left: 0px;
+  left: 0;
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -484,7 +485,7 @@ button {
 
 .main-menu {
   margin-top: 59px;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 .main-menu-item {
@@ -493,8 +494,7 @@ button {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 20px;
-  padding: 20px;
-  padding-left: 23px;
+  padding: 20px 24px;
   width: 300px;
   height: 123px;
 }
@@ -527,7 +527,7 @@ button {
   font-weight: 700;
   line-height: 30px;
   color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
 .main-menu-item-btn {
@@ -558,8 +558,7 @@ button {
   -webkit-transform: translate( -50%, -50%);
   -ms-transform: translate( -50%, -50%);
       transform: translate( -50%, -50%);
-  background-image: url(../img/icons-menu/big-icon-sprite.png);
-  background-repeat: no-repeat;
+  background: url(../img/icons-menu/big-icon-sprite.png) center no-repeat;
   display: block;
 }
 
@@ -677,6 +676,10 @@ button {
   cursor: pointer;
 }
 
+.slider-controls label:last-child {
+  margin-right: 0;
+}
+
 #dot-1:checked ~ .slider-controls label[for="dot-1"],
 #dot-2:checked ~ .slider-controls label[for="dot-2"] {
   background: #ee3643;
@@ -697,7 +700,7 @@ button {
 }
 
 .slider-nav .next-btn {
-  right: 0;
+  right: -5px;
 }
 
 .slider-nav .icon-left::before,
@@ -764,14 +767,19 @@ button {
   vertical-align: top;
   margin-right: 17px;
   width: 218px;
-	text-align: center;
+  text-align: center;
   border: 1px solid #e5e5e5;
 }
 
+.product-item:last-child,
+.brand:last-child {
+  margin-right: -1px;
+}
+
 .product-item {
-	font-size: 17px;
+  font-size: 17px;
   font-weight: 700;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: #ffffff;
 }
 
@@ -802,26 +810,24 @@ button {
 .product-image {
   width: 218px;
   height: 168px;
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .product-image img {
-		max-width: 100%;
+  max-width: 100%;
 }
 
 .product-name {
-  min-height: 20px;
-  padding: 0 25px;
-  padding-bottom: 8px;
   margin-top: 10px;
-	margin-bottom: 15x;
+  margin-bottom: 5px;
+  padding: 0 25px;
   font-size: 18px;
   line-height: 20px;
 }
 
 .old-price {
   min-height: 25px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   text-decoration: line-through;
   color: #999999;
@@ -831,7 +837,7 @@ button {
   position: relative;
   width: 80px;
   margin: 0 auto 20px;
-  padding: 8px 28px;
+  padding: 7px 27px;
   text-transform: uppercase;
   color: #ffffff;
   border-radius: 3px;
@@ -845,7 +851,7 @@ button {
   right: -25px;
   width: 0;
   height: 0;
-  border: 20px solid #ffffff;
+  border: 19px solid #ffffff;
   border-left-color: #ee3643;
 }
 
@@ -869,8 +875,7 @@ button {
   display: block;
   box-sizing: border-box;
   width: 135px;
-  margin: 0 auto;
-  margin-bottom: 7px;
+  margin: 0 auto 7px;
   font-size: 14px;
   font-family: "Cuprum", sans-serif;
   line-height: 18px;
@@ -914,7 +919,6 @@ button {
   padding-top: 8px;
   padding-bottom: 6px;
   border: 3px solid #63a63e;
-  border-bottom-color: #63a63e;
   color: #32425c;
   background: white;
 }
@@ -942,11 +946,6 @@ button {
       transform: translate(-50%, -50%);
 }
 
-.product-item:last-of-type,
-.brand:nth-of-type(4n) {
-  margin-right: -1px;
-}
-
 .services {
   margin-top: 85px;
   margin-bottom: 75px;
@@ -955,8 +954,7 @@ button {
 }
 
 .section-title {
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin: 0 0 25px;
 }
 
 .section-description {
@@ -978,7 +976,7 @@ button {
 
 .service-item {
   display: block;
-  padding: 12px 22px 19px;
+  padding: 12px 22px 18px;
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
@@ -1099,7 +1097,7 @@ button {
 
 .information-content {
   position: relative;
-  margin-bottom: 86px;
+  margin-bottom: 85px;
 }
 
 .information-content .section-description {
@@ -1203,7 +1201,7 @@ button {
 }
 
 /*----------основной контент-----------*/
-.left-column{
+.left-column {
   float: left;
   width: 220px;
   font-weight: 400;
@@ -1221,12 +1219,9 @@ button {
 }
 
 .left-column fieldset {
-	padding: 0;
-	padding-bottom: 10px;
-	margin: 0;
-  margin-top: 10px;
-	margin-bottom: 14px;
-	width: 220px;
+  padding: 0 0 10px;
+  margin: 10px 0 14px;
+  width: 220px;
   border: 0;
 }
 
@@ -1544,8 +1539,7 @@ button {
   right: 10px;
   width: 21px;
   height: 21px;
-  background-image: url(../img/cross-btn.svg);
-  background-repeat: no-repeat;
+  background: url(../img/cross-btn.svg) no-repeat center;
 }
 
 .modal-content {
@@ -1559,8 +1553,8 @@ button {
   margin-top: -225px;
   margin-left: -470px;
   width: 940px;
-  height: 450px;
-  background-image: url(../img/map-big.jpg) center no-repeat;
+  height: 446px;
+  background: url(../img/map-big.jpg) no-repeat center;
   box-shadow: 0 0 16px 1px rgba(35, 31, 32, 0.5);
 }
 
@@ -1580,10 +1574,14 @@ button {
   margin-left: -310px;
   margin-top: -220px;
   width: 620px;
-  background: #fff;
+  background-color: #ffffff;
   box-shadow:
     inset 0 7px #ee3643,
     0 20px 40px rgba(41, 52, 73, 0.75);
+}
+
+.cart-form {
+  margin-top: -141px;
 }
 
 .cart-icon {
@@ -1602,7 +1600,7 @@ button {
 
 .modal-btns {
   padding: 38px 80px;
-  background: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .cart-btn {
@@ -1612,7 +1610,7 @@ button {
 .cart-btn.white {
   margin-left: 16px;
   color: #000000;
-  background: #ffffff;
+  background-color: #ffffff;
 }
 
 /* -------------- ОКНО ФОРМЫ ОБРАТНОЙ СВЯЗИ --------------- */
@@ -1638,10 +1636,6 @@ button {
   font-size: 18px;
 }
 
-label[for="user-message"] {
-  padding-top: 20px;
-}
-
 .feedback-form .half-width {
   display: inline-block;
   margin-right: 16px;
@@ -1652,6 +1646,7 @@ label[for="user-message"] {
 }
 
 .feedback-form input{
+  margin-bottom: 20px;
   width: 220px;
 }
 
