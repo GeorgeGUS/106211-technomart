@@ -14,8 +14,10 @@ if (feedbackWindow) {
   var messageCust = feedbackWindow.querySelector("[name=customer-message]");
 }
 
-var storageNameCust = localStorage.getItem("nameCust");
-var storageEmailCust = localStorage.getItem("emailCust");
+if (localStorage) {
+  storageNameCust = localStorage.getItem("nameCust");
+  storageEmailCust = localStorage.getItem("emailCust");
+}
 
 var buyBtn = document.querySelectorAll(".buy");
 var cartWindow = document.querySelector(".cart-form");
@@ -61,7 +63,7 @@ for (var i = 0; i < popup.length; i++) {
     event.preventDefault();
     for (var j = 0; j < popup.length; j++) {
       popup[j].classList.remove("modal-active");
-      feedbackWindow.classList.remove("modal-error");
+      popup[j].classList.remove("modal-error");
     }
   });
 }
@@ -71,7 +73,7 @@ window.addEventListener("keydown", function (event) {
     for (var j = 0; j < popup.length; j++) {
       if (popup[j].classList.contains("modal-active")) {
         popup[j].classList.remove("modal-active");
-        feedbackWindow.classList.remove("modal-error");
+        popup[j].classList.remove("modal-error");
       }
     }
   }
