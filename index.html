@@ -351,53 +351,50 @@
           </div>
           <a href="#" class="std-btn feedback-btn">Заблудились? Напишите нам!</a>
         </section>
-        <div class="modal-window map-image-big" style="background-image: url(../img/map-big.jpg);">
+        <div class="modal-window map-image-big" style="background: url(../img/map-big.jpg) no-repeat center;">
           <a href="#" class="close-btn"></a>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124054!2d30.320894616195037!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1454870393393" width="940" height="450" allowtransparency="true"></iframe>
         </div>
       </section>
-
-      <!--       ********МОДАЛЬНОЕ ОКНО "ФОРМА ОБРАТНОЙ СВЯЗИ"********       -->
-      <div class="modal-window feedback-form">
-        <a href="#" class="close-btn"></a>
-        <form action="http://echo.htmlacademy.ru" method="post">
-          <div class="modal-content">
-            <div class="half-width">
-              <label for="customer-name">Ваше имя:</label><br>
-              <input id="customer-name" type="text" name="customer-name"
-                placeholder="Представьтесь, пожалуйста">
-            </div>
-            <div class="half-width">
-              <label for="customer-email">Ваш e-mail:</label><br>
-              <input id="customer-email" type="text" name="customer-email"
-                placeholder="Для отправки ответа">
-            </div>
-            <label for="customer-message">Текст письма:</label><br>
-            <textarea id="customer-message" rows="5" name="customer-message"
-              placeholder="В свободной форме"></textarea>
-          </div>
-          <div class="modal-btns">
-            <button class="std-btn send-contact-form" type="submit">Отправить</button>
-          </div>
-        </form>
-      </div>
-      <!-- ************************************************************ -->
-
-      <!--       ********МОДАЛЬНОЕ ОКНО "ТОВАР В КОРЗИНЕ"********       -->
-      <div class="modal-window cart-form">
-        <a href="#" class="close-btn"></a>
+    </main> 
+    
+    <!-- *********** МОДАЛЬНОЕ ОКНО "ФОРМА ОБРАТНОЙ СВЯЗИ" *********** -->
+    <div class="modal-window feedback-form">
+      <a href="#" class="close-btn"></a>
+      <form action="http://echo.htmlacademy.ru" method="post">
         <div class="modal-content">
-          <span class="cart-icon"></span>
-          <span class="cart-title">Товар добавлен в корзину!</span>
+          <div class="half-width">
+            <label for="customer-name">Ваше имя:</label>
+            <input id="customer-name" type="text" name="customer-name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="half-width">
+            <label for="customer-email">Ваш e-mail:</label>
+            <input id="customer-email" type="text" name="customer-email" placeholder="Для отправки ответа">
+          </div>
+          <label for="customer-message">Текст письма:</label>
+          <textarea id="customer-message" rows="5" name="customer-message" placeholder="В свободной форме"></textarea>
         </div>
         <div class="modal-btns">
-          <a href="#" class="std-btn cart-btn">Оформить заказ</a>
-          <a href="#" class="std-btn cart-btn white">Продолжить покупки</a>
+          <button class="std-btn send-contact-form" type="submit">Отправить</button>
         </div>
-      </div>
-      <!-- ************************************************************ -->
-    </main>
+      </form>
+    </div>
+    <!-- ************************************************************ -->
 
+    <!-- ************* МОДАЛЬНОЕ ОКНО "ТОВАР В КОРЗИНЕ" ************* -->
+    <div class="modal-window cart-form">
+      <a href="#" class="close-btn"></a>
+      <div class="modal-content">
+        <span class="cart-icon"></span>
+        <span class="cart-title">Товар добавлен в корзину!</span>
+      </div>
+      <div class="modal-btns">
+        <a href="#" class="std-btn cart-btn">Оформить заказ</a>
+        <a href="#" class="std-btn cart-btn white">Продолжить покупки</a>
+      </div>
+    </div>
+    <!-- ************************************************************ -->
+   
     <footer class="main-footer">
       <div class="main-footer-top clearfix">
         <div class="container">
