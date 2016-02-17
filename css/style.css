@@ -1405,10 +1405,6 @@ button {
   border-bottom: 1px dotted #ee3643;
 }
 
-.sort-name:last-of-type {
-	margin-right: 40px;
-}
-
 .sort-name:hover {
   color: #000000;
   border-bottom: 1px solid #ee3643;
@@ -1421,23 +1417,22 @@ button {
 
 .sort-direction {
   position: absolute;
-  display: inline-block;
-  vertical-align: middle;
+  top: 6px;
+  right: 10px;
 }
 
-.sort-direction i[class^="icon-"] {
-	margin-right: 6px;
+.sort-direction i {
+  margin-left: 6px;
   font-size: 23px;
-  line-height: 1;
   color: #c6c2bd;
 }
 
-.sort-direction i[class^="icon-"]:hover {
+.sort-direction i:hover {
   color: #000000;
 }
 
-.arrow-selected i[class^="icon-"],
-.arrow-selected i[class^="icon-"]:hover{ /* чтобы активная стрелка не менялась */
+.arrow-selected i,
+.arrow-selected i:hover{ /* чтобы активная стрелка не менялась */
   color: #ee3643;
 }
 
