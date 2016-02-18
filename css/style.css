@@ -1714,6 +1714,7 @@ button {
 
 .main-footer-top .footer-contacts {
   float: left;
+  max-width: 340px;
 }
 
 .footer-logo {
@@ -1730,15 +1731,20 @@ button {
 
 .main-footer-top .footer-menu {
   float: right;
+  max-width: 600px;
 }
 
 .footer-menu ul {
-  margin: 35px 0;
+  margin-top: 35px;
   text-align: right;
 }
 
 .footer-menu li {
   margin-left: 56px;
+}
+
+.footer-menu li:first-child {
+  margin-left: 0;
 }
 
 .footer-menu a {
