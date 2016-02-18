@@ -153,9 +153,10 @@ button {
 }
 
 .site-logo,
-.top-menu .search-field,
+.search-field,
 .top-menu-action,
 .make-order-btn {
+  position: relative;
   box-sizing: border-box;
   display: inline-block;
   padding: 9px 5px;
@@ -176,31 +177,52 @@ button {
   box-shadow: 0 5px #b52933;
 }
 
+.site-logo:hover {
+  background: #ca2c37;
+  box-shadow: 0 5px #9a212a;
+}
+
+.site-logo:active {
+  background: #ba2732;
+  box-shadow: 0 5px #8e1e26;
+}
+
 .top-menu i {
   margin: 0 11px;
   opacity: 0.3;
 }
 
-.top-menu .search-field {
+.search-field {
   position: relative;
+  padding: 0;
   display: inline-block;
-  text-align: left;
   width: 270px;
   height: 42px;
   font-size: 17px;
   background-color: #293449;
 }
 
-.search-field input {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 50px;
+.search-field input {  
+  padding-left: 48px;
+  padding-right: 12px;
   width: 210px;
-  height: 40px;
-  border: none;
+  height: 40px;  
   background-color: #293449;
+  border: none;
   outline: none;
+}
+
+.search-field .icon-search {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  margin: 0;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.search-field input::-ms-clear {
+  display: none;
 }
 
 .search-field input::-webkit-input-placeholder { color:#ffffff; }
@@ -208,17 +230,25 @@ button {
 .search-field input:-moz-placeholder { color:#ffffff; }
 .search-field input:-ms-input-placeholder { color:#ffffff; }
 
-.search-field label {
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 270px;
-  line-height: 42px;
+.search-field input:hover,
+.top-menu-action:not(.make-order-btn):hover {
+  background-color: #212a3a;
 }
 
-.search-field i {
-	margin-left: 18px;
+.search-field:hover .icon-search,
+.top-menu-action:hover [class^="icon-"] {
+  opacity: 1;
+}
+
+.search-field input:focus,
+.search-field:active input {
+  color:#000000;
+  background-color: #ffffff;
+}
+.search-field:active .icon-search,
+.search-field input:focus ~ label .icon-search {
+  color: #ee3643;
+  opacity: 1;
 }
 
 .top-menu-action {
@@ -226,35 +256,13 @@ button {
   font-size: 17px;
 }
 
-.search-field:hover,
-.search-field input:hover,
-.top-menu-action:not(.make-order-btn):hover {
-  background-color: #212a3a;
-}
-
-.search-field:hover i,
-.top-menu-action:hover i {
-  opacity: 1;
-}
-.search-field:active,
-.search-field:active input,
-.search-field input:focus {
-  color:#000000;
-  background-color: #ffffff;
-}
-.search-field label:active,
-.search-field input:active ~ label,
-.search-field input:focus ~ label {
-  color: #ee3643;
-  background-color: #ffffff;
-}
-.search-field:active ~ label i,
-.search-field input:focus ~ label i {
-  opacity: 1;
-}
-
 .top-menu-action:not(.make-order-btn):active {
   background-color: #161d29;
+}
+
+.top-menu-action:active,
+.make-order-btn:active {
+  color: rgba(225, 225, 225, 0.5);
 }
 
 .top-menu-action .icon-bookmark {
@@ -271,15 +279,20 @@ button {
   background-color: #63a63e;
 }
 
+/* -- hack for IE -- */
+.search-field .icon-search::after,
+.top-menu-action::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .main-header-content {
   padding-top: 45px;
   padding-bottom: 40px;
-}
-
-.site-description,
-.site-contacts,
-.site-login {
-  width: 300px;
 }
 
 .site-description,
@@ -339,13 +352,15 @@ button {
   font-size: 14px;
   line-height: 23px;
 }
-
+/* ---------------- SITE-LOGIN-BTNS ------------------- */
 .site-login {
+  position: relative;
   float: right;
   text-align: right;
 }
 
 .site-login-item {
+  position: relative;/* -- hack for IE -- */
   box-sizing: border-box;
   display: inline-block;
   font-size: 21px;
@@ -357,25 +372,12 @@ button {
   background: #ffffff;
 }
 
-.site-login-item:hover {
-  color: #ee3643;
-}
-
 .site-login-item i {
-	margin-left: 5px;
-	margin-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   color: #c5c5c5;
 }
 
-.site-login-item:hover i {
-  color: #32425c;
-}
-
-.site-login-item:active,
-.site-login-item:active i,
-.site-login-item:active .user-name{
-  color: rgba(0, 0, 0, 0.3);
-}
 
 .site-login-enter {
   width: 120px;
@@ -387,10 +389,6 @@ button {
   margin-left: 10px;
 }
 
-.site-login-registered {
-  position: relative;
-}
-
 .user-profile {  
   padding-right: 40px;
   width: 300px;
@@ -400,13 +398,9 @@ button {
   overflow: hidden; 
 }
 
-.user-profile:hover {
-  color: #000000;
-}
-
 .user-profile .icon-user {
-	 font-size: 19px;
-	 margin-left: 15px;
+  font-size: 19px;
+  margin-left: 15px;
   margin-right: 8px;
 }
 
@@ -419,9 +413,38 @@ button {
   font-size: 22px;
 }
 
+.site-login-item:hover {  
+  color: #000000;
+}
+
+.site-login-item:hover i{
+  color: #32425c;
+}
+
+.site-login-enter:hover,
+.site-login-registration:hover {
+  color: #ee3643;
+}
+
+.site-login-item:active,
+.site-login-item:active i,
+.site-login-item .user-name:active i {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* -- hack for IE -- */
+.site-login-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .user-profile-controls {
-	 margin-bottom: -2px;
-	 padding-left: 5px;
+  margin-bottom: -2px;
+  padding-left: 5px;
   text-align: left;
 }
 
@@ -434,7 +457,7 @@ button {
 .dot-divider {
   position: relative;
   display: block;
-	 width: 0;
+  width: 0;
 }
 
 .dot-divider::after {
@@ -456,6 +479,7 @@ button {
   color: #32425c;
   opacity: 0.3;
 }
+/* ---------------- SITE-LOGIN-BTNS END ------------------- */
 
 .main-header-navigation {
   font-size: 0;
@@ -1311,17 +1335,17 @@ button {
 .price-divider {
   display: inline-block;
   width: 30px;
-	font-size: 16px;
+  font-size: 16px;
   text-align: center;
 }
 
 .price-controls input {
-	padding: 0;
+  padding: 0;
   padding-top: 8px;
-	padding-bottom: 12px;
+  padding-bottom: 12px;
   width: 95px;
-	font-size: 17px;
-	line-height: 18px;
+  font-size: 17px;
+  line-height: 18px;
   text-align: center;
   color: #283136;
   border: none;
@@ -1329,7 +1353,6 @@ button {
   outline: none;
   background: #f7f3ec;
 }
-
 
 /*-----------RANGE-FILTER END-------------*/
 .company-filter li {
@@ -1419,6 +1442,11 @@ button {
   position: absolute;
   top: 6px;
   right: 10px;
+}
+
+.sort-direction .asc,
+.sort-direction .desc {  
+  text-decoration: none;
 }
 
 .sort-direction i {
@@ -1649,6 +1677,10 @@ button {
   width: 220px;
 }
 
+.feedback-form input::-ms-clear {
+  display: none;
+}
+
 .feedback-form textarea {
   padding-top: 5px;
   width: 100%;
@@ -1715,7 +1747,7 @@ button {
 }
 
 .footer-menu a:hover,
-.main-footer-bottom a:hover {
+.main-footer-bottom .link:hover {
   text-decoration: underline;
 }
 
@@ -1739,7 +1771,7 @@ button {
   background: #293449;
 }
 
-.main-footer-bottom a:active {
+.main-footer-bottom .link:active {
   text-decoration: none;
   color: #ee3643;
 }
