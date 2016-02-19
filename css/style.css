@@ -198,11 +198,11 @@ button {
   background-color: #293449;
 }
 
-.search-field input {  
+.search-field input {
   padding-left: 48px;
   padding-right: 12px;
   width: 210px;
-  height: 40px;  
+  height: 40px;
   background-color: #293449;
   border: none;
   outline: none;
@@ -358,7 +358,7 @@ button {
 .site-login-item {
   position: relative;/* -- hack for IE -- */
   box-sizing: border-box;
-  display: inline-block;  
+  display: inline-block;
   vertical-align: top;
   font-size: 21px;
   padding: 11px 0 10px;
@@ -385,13 +385,13 @@ button {
   margin-left: 10px;
 }
 
-.user-profile {  
+.user-profile {
   padding-right: 40px;
   width: 300px;
   text-align: left;
-  text-overflow: ellipsis; 
-  white-space: nowrap; 
-  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .user-profile .icon-user {
@@ -409,11 +409,11 @@ button {
   font-size: 22px;
 }
 
-.site-login-item:hover {  
+.site-login-item:hover {
   color: #000000;
 }
 
-.site-login-item:hover i{
+.site-login-item:hover i {
   color: #32425c;
 }
 
@@ -429,7 +429,7 @@ button {
 }
 
 /* -- hack for IE -- */
-.site-login-item::after{
+.site-login-item::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1060,13 +1060,12 @@ button {
   padding-top: 45px;
 }
 
-.service-content p:last-of-type{
+.service-content p:last-of-type {
   margin-bottom: 30px;
 }
 
 .service-title {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 0 0 25px;
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
@@ -1080,8 +1079,7 @@ button {
   top: 47px;
   width: 460px;
   height: 285px;
-  background-position: bottom right;
-  background-repeat: no-repeat;
+  background: no-repeat bottom right;
 }
 
 .credit-btn {
@@ -1271,8 +1269,7 @@ button {
 
 .left-column li {
   position: relative;
-  margin: 10px 0;
-  margin-left: 35px;
+  margin: 10px 0 10px 35px;
   line-height: 30px;
 }
 /*-----------RANGE-FILTER-------------*/
@@ -1307,7 +1304,7 @@ button {
 .range-controls .toggle {
   position: absolute;
   top: 30px;
-  left: 0px;
+  left: 0;
   width: 4px;
   height: 4px;
   cursor: pointer;
@@ -1449,7 +1446,7 @@ button {
 }
 
 .sort-direction .asc,
-.sort-direction .desc {  
+.sort-direction .desc {
   text-decoration: none;
 }
 
@@ -1675,7 +1672,7 @@ button {
   margin-right: 0;
 }
 
-.feedback-form input{
+.feedback-form input {
   margin-bottom: 17px;
   width: 220px;
 }
