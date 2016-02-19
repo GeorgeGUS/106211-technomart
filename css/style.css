@@ -1583,7 +1583,6 @@ button {
   margin-left: -470px;
   width: 940px;
   height: 446px;
-  background: url(../img/map-big.jpg) no-repeat center;
   box-shadow: 0 0 16px 1px rgba(35, 31, 32, 0.5);
 }
 
@@ -1593,6 +1592,7 @@ button {
 
 .map-image-big iframe {
   border: none;
+  background: url(../img/map-big.jpg) no-repeat center;
 }
 
 /* ---------------- ОКНО "ТОВАР В КОРЗИНЕ" ---------------- */
